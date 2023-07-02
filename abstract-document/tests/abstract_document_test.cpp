@@ -2,8 +2,7 @@
 // Created by noname on 01.07.23.
 //
 #include <gtest/gtest.h>
-#include <App.h>
-
+#include <AbstractDocument.h>
 #include <utility>
 
 using std::map;

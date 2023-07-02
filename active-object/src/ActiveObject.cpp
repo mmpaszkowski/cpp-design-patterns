@@ -2,8 +2,10 @@
 // Created by noname on 02.07.23.
 //
 #include <utility>
+#include <spdlog/spdlog.h>
+#include "ActiveObject.h"
 
-#include "../include/ActiveObject.h"
+using spdlog::info;
 
 ActiveObject::ActiveObject(const std::string &name) : name(name), requests(), queue_mutex(), t(), run(true) {
     auto runner = [this]() {

@@ -5,9 +5,9 @@
 #ifndef CPP_DESIGN_PATTERNS_KINGDOM_FACTORY_H
 #define CPP_DESIGN_PATTERNS_KINGDOM_FACTORY_H
 
-#include "Castle.h"
-#include "King.h"
-#include "Army.h"
+class Army;
+class Castle;
+class King;
 
 class KingdomFactory
 {

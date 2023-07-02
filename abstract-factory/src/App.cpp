@@ -33,3 +33,4 @@ void App::createKingdom(KingdomType kingdomType) {
     kingdom->setArmy(kingdomFactory->createArmy());
     delete kingdomFactory;
 }
+

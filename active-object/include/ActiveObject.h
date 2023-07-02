@@ -11,11 +11,6 @@
 #include <functional>
 #include <mutex>
 #include <thread>
-#include <iostream>
-#include <chrono>
-#include <spdlog/spdlog.h>
-
-using spdlog::info;
 
 class ActiveObject {
 public:

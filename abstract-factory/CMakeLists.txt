@@ -7,6 +7,7 @@ set(LIBRARY_SOURCES
         src/OrcArmy.cpp
         src/OrcCastle.cpp
         src/OrcKing.cpp
+        src/Kingdom.cpp
         )
 
 set(LIBRARY_HEADERS
@@ -24,7 +25,7 @@ set(LIBRARY_HEADERS
         include/OrcCastle.h
         include/OrcKing.h
         include/OrcKingdomFactory.h
-        src/Kingdom.cpp)
+        )
 
 
 add_library(abstract-factory STATIC

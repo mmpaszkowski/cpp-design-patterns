@@ -6,7 +6,6 @@
 #define CPP_DESIGN_PATTERNS_APP_H
 
 #include <memory>
-#include "AbstractDocument.h"
 
 class App
 {

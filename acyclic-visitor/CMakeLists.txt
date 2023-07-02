@@ -1,11 +1,21 @@
 # SOURCES AND HEADERS
 set(LIBRARY_SOURCES
         src/App.cpp
+        src/Zoom.cpp
+        src/Hayes.cpp
         )
 
 set(LIBRARY_HEADERS
         include/App.h
-        )
+        include/ZoomVisitor.h
+        include/Zoom.h
+        include/ModemVisitor.h
+        include/Modem.h
+        include/HayesVisitor.h
+        include/Hayes.h
+        include/AllModemVisitor.h
+        include/ConfigureForUnixVisitor.h
+        include/ConfigureForDosVisitor.h src/ConfigureForUnixVisitor.cpp src/ConfigureForDosVisitor.cpp)
 
 
 add_library(acycylic-visitor STATIC

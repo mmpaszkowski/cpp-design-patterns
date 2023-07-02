@@ -5,9 +5,8 @@
 #include <gtest/gtest.h>
 #include <App.h>
 
-TEST(acycylic_visitor, should_execute_application_without_exception)
+TEST(acyclic_visitor, should_execute_application_without_exception)
 {
-//    testing::internal::CaptureStdout();
     App app;
     ASSERT_NO_THROW(app.run());
 }
