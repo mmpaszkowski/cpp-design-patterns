@@ -16,5 +16,5 @@ add_subdirectory(abstract-document)
 add_subdirectory(abstract-factory)
 add_subdirectory(active-object)
 add_subdirectory(acyclic-visitor)
+add_subdirectory(adapter)
 add_subdirectory(template)
-

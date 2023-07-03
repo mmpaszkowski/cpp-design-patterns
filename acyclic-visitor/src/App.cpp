@@ -21,4 +21,3 @@ void App::run() const {
     hayes.accept(conUnix); // Hayes modem with Unix configurator
     zoom.accept(conUnix); // Zoom modem with Unix configurator
 }
-
