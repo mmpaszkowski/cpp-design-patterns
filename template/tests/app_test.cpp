@@ -5,7 +5,7 @@
 #include <gtest/gtest.h>
 #include <App.h>
 
-TEST(active_object, should_execute_application_without_exception)
+TEST(template_, should_execute_application_without_exception)
 {
 //    testing::internal::CaptureStdout();
     App app;
