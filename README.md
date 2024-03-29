@@ -63,7 +63,7 @@ Planned design patterns
 | facade                                 |        :x:         |     :x:     |                         |
 | factory                                |        :x:         |     :x:     |                         |
 | factory-kit                            |        :x:         |     :x:     |                         |
-| factory-method                         |        :x:         |     :x:     |                         |
+| factory-method                         | :heavy_check_mark: |     :x:     |                         |
 | fanout-fanin                           |        :x:         |     :x:     |                         |
 | feature-toggle                         |        :x:         |     :x:     |                         |
 | filterer                               |        :x:         |     :x:     |                         |
