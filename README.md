@@ -18,7 +18,7 @@ Planned design patterns
 | async-method-invocation                |        :x:         |     :x:     |                         |
 | balking                                |        :x:         |     :x:     |                         |
 | bridge                                 |        :x:         |     :x:     |                         |
-| builder                                |        :x:         |     :x:     |                         |
+| builder                                | :heavy_check_mark: |     :x:     |                         |
 | business-delegate                      |        :x:         |     :x:     |                         |
 | bytecode                               |        :x:         |     :x:     |                         |
 | caching                                |        :x:         |     :x:     |                         |
