@@ -117,7 +117,7 @@ Planned design patterns
 | producer-consumer                      |        :x:         |     :x:     |                         |
 | promise                                |        :x:         |     :x:     |                         |
 | property                               |        :x:         |     :x:     |                         |
-| prototype                              |        :x:         |     :x:     |                         |
+| prototype                              | :heavy_check_mark: |     :x:     |                         |
 | proxy                                  |        :x:         |     :x:     |                         |
 | queue-load-leveling                    |        :x:         |     :x:     |                         |
 | reactor                                |        :x:         |     :x:     |                         |
