@@ -5,21 +5,22 @@
 #ifndef PROFESSION_H
 #define PROFESSION_H
 
-#include <string>
 #include <iostream>
+#include <string>
 
-namespace dp {
-    enum class Profession {
-        Warrior,
-        Thief,
-        Mage,
-        Priest
-    };
+namespace dp
+{
+enum class Profession
+{
+    Warrior,
+    Thief,
+    Mage,
+    Priest
+};
 
-    std::ostream& operator << (std::ostream& os, Profession profession);
-    [[nodiscard]] std::string toString(Profession profession);
-}
-
+std::ostream             &operator<<(std::ostream &os, Profession profession);
+[[nodiscard]] std::string toString(Profession profession);
+} // namespace dp
 
 
 #endif //PROFESSION_H

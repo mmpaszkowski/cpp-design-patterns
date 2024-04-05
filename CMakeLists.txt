@@ -12,6 +12,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(spdlog)
 
+# CMAKE MODULES
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/)
+include(Tools)
+
 add_subdirectory(abstract-document)
 add_subdirectory(abstract-factory)
 add_subdirectory(active-object)

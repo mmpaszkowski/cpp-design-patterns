@@ -2,8 +2,8 @@
 // Created by noname on 01.07.23.
 //
 
-#include <gtest/gtest.h>
 #include <App.h>
+#include <gtest/gtest.h>
 
 TEST(prototype, should_execute_application_without_exception)
 {

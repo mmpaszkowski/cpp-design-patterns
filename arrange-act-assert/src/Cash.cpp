@@ -23,5 +23,3 @@ bool Cash::minus(int subtrahend) {
 int Cash::count() const {
     return amount;
 }
-
-

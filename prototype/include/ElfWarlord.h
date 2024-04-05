@@ -7,44 +7,65 @@
 
 #include "Warlord.h"
 
-#include <utility>
-#include <string>
 #include <memory>
+#include <string>
+#include <utility>
 
 namespace dp
 {
-    class ElfWarlord : public Warlord
+class ElfWarlord : public Warlord
+{
+public:
+    explicit constexpr ElfWarlord(const std::string& weapon);
+    explicit constexpr ElfWarlord(std::string&& weapon) noexcept;
+    constexpr ElfWarlord(const ElfWarlord& other);
+    constexpr ElfWarlord(ElfWarlord&& other) noexcept;
+    constexpr ElfWarlord& operator=(const ElfWarlord& other);
+    constexpr ElfWarlord& operator=(ElfWarlord&& other) noexcept;
+    constexpr ~ElfWarlord() override;
+
+    constexpr bool                                   operator==(const Warlord& other) const override;
+    [[nodiscard]] constexpr std::string              toString() const override;
+    [[nodiscard]] constexpr std::unique_ptr<Warlord> clone() const override;
+
+private:
+    std::string weapon_;
+};
+
+constexpr ElfWarlord::ElfWarlord(const std::string& weapon) : weapon_{weapon}
+{
+}
+constexpr ElfWarlord::ElfWarlord(std::string&& weapon) noexcept : Warlord(), weapon_(std::move(weapon))
+{
+}
+constexpr ElfWarlord::ElfWarlord(const ElfWarlord& other)                = default;
+constexpr ElfWarlord::ElfWarlord(ElfWarlord&& other) noexcept            = default;
+constexpr ElfWarlord& ElfWarlord::operator=(const ElfWarlord& other)     = default;
+constexpr ElfWarlord& ElfWarlord::operator=(ElfWarlord&& other) noexcept = default;
+constexpr ElfWarlord::~ElfWarlord()                                      = default;
+
+constexpr bool ElfWarlord::operator==(const Warlord& other) const
+{
+    try
     {
-    public:
-        explicit constexpr ElfWarlord(const std::string& weapon);
-        explicit constexpr ElfWarlord(std::string&& weapon) noexcept;
-        constexpr ElfWarlord(const ElfWarlord& other);
-        constexpr ElfWarlord(ElfWarlord&& other) noexcept;
-        constexpr ElfWarlord& operator=(const ElfWarlord& other);
-        constexpr ElfWarlord& operator=(ElfWarlord&& other) noexcept;
-        constexpr ~ElfWarlord() override;
-        [[nodiscard]] constexpr std::string toString() const override ;
-        [[nodiscard]] constexpr std::unique_ptr<Warlord> clone() const override;
-
-    private:
-        std::string weapon_;
-    };
-
-    constexpr ElfWarlord::ElfWarlord(const std::string &weapon) : weapon_{weapon} { }
-    constexpr ElfWarlord::ElfWarlord(std::string &&weapon) noexcept : Warlord(), weapon_(std::move(weapon)) { }
-    constexpr ElfWarlord::ElfWarlord(const ElfWarlord& other) = default;
-    constexpr ElfWarlord::ElfWarlord(ElfWarlord&& other) noexcept = default;
-    constexpr ElfWarlord& ElfWarlord::operator=(const ElfWarlord& other) = default;
-    constexpr ElfWarlord& ElfWarlord::operator=(ElfWarlord&& other) noexcept = default;
-    constexpr ElfWarlord::~ElfWarlord() = default;
-
-    constexpr std::string ElfWarlord::toString() const {
-        return "Elven warlord helps in " + weapon_;
+        auto otherElfWarlord = dynamic_cast<const ElfWarlord&>(other);
+        return weapon_ == otherElfWarlord.weapon_;
     }
-
-    constexpr std::unique_ptr<Warlord> ElfWarlord::clone() const {
-        return std::make_unique<ElfWarlord>(*this);
+    catch (const std::bad_cast&)
+    {
+        return false;
     }
 }
+
+constexpr std::string ElfWarlord::toString() const
+{
+    return "Elven warlord helps in " + weapon_;
+}
+
+constexpr std::unique_ptr<Warlord> ElfWarlord::clone() const
+{
+    return std::make_unique<ElfWarlord>(*this);
+}
+} // namespace dp
 
 #endif //ELF_WARLORD_H_

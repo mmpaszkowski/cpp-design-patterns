@@ -5,21 +5,22 @@
 #ifndef ARMOR_H
 #define ARMOR_H
 
-#include <string>
 #include <iostream>
+#include <string>
 
-namespace dp {
-    enum class Armor {
-        Clothes,
-        Leather,
-        ChainMail,
-        PlateMail
-    };
+namespace dp
+{
+enum class Armor
+{
+    Clothes,
+    Leather,
+    ChainMail,
+    PlateMail
+};
 
-    std::ostream& operator << (std::ostream& os, Armor armor);
-    [[nodiscard]] std::string toString(Armor armor);
-}
-
+std::ostream&             operator<<(std::ostream& os, Armor armor);
+[[nodiscard]] std::string toString(Armor armor);
+} // namespace dp
 
 
 #endif //ARMOR_H

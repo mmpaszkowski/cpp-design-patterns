@@ -10,6 +10,7 @@ set(LIBRARY_SOURCES
 
 set(LIBRARY_HEADERS
         include/App.h
+        include/Armor.h
         include/HairColor.h
         include/HairType.h
         include/Hero.h

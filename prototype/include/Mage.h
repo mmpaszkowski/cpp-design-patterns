@@ -5,17 +5,19 @@
 #ifndef MAGE_H
 #define MAGE_H
 
-#include <string>
 #include <memory>
+#include <string>
 
-namespace dp {
-    class Mage
-    {
-    public:
-        [[nodiscard]] virtual constexpr std::string toString() const = 0;
-        [[nodiscard]] virtual constexpr std::unique_ptr<Mage> clone() const = 0;
-        constexpr virtual ~Mage() = default;
-    };
-}
+namespace dp
+{
+class Mage
+{
+public:
+    constexpr virtual ~Mage()                                                                 = default;
+    constexpr virtual bool                                operator==(const Mage& other) const = 0;
+    [[nodiscard]] virtual constexpr std::string           toString() const                    = 0;
+    [[nodiscard]] virtual constexpr std::unique_ptr<Mage> clone() const                       = 0;
+};
+} // namespace dp
 
 #endif //MAGE_H
