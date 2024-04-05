@@ -135,7 +135,7 @@ Planned design patterns
 | service-locator                        |        :x:         |     :x:     |                         |
 | service-to-worker                      |        :x:         |     :x:     |                         |
 | sharding                               |        :x:         |     :x:     |                         |
-| singleton                              |        :x:         |     :x:     |                         |
+| singleton                              | :heavy_check_mark: |     :x:     |                         |
 | spatial-partition                      |        :x:         |     :x:     |                         |
 | special-case                           |        :x:         |     :x:     |                         |
 | specification                          |        :x:         |     :x:     |                         |
