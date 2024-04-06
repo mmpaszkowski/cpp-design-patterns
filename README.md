@@ -97,7 +97,7 @@ Planned design patterns
 | module                                 |        :x:         |     :x:     |                         |
 | monad                                  |        :x:         |     :x:     |                         |
 | monitor                                |        :x:         |     :x:     |                         |
-| monostate                              |        :x:         |     :x:     |                         |
+| monostate                              | :heavy_check_mark: |     :x:     |                         |
 | multiton                               |        :x:         |     :x:     |                         |
 | mute-idiom                             |        :x:         |     :x:     |                         |
 | naked-objects                          |        :x:         |     :x:     |                         |
