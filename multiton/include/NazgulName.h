@@ -7,6 +7,8 @@
 
 #include <iostream>
 
+namespace dp
+{
 using std::literals::string_literals::operator""s;
 
 enum class NazgulName
@@ -22,9 +24,9 @@ enum class NazgulName
     Uvatha
 };
 
-constexpr std::ostream& operator<<(std::ostream& os, const NazgulName weapon_type)
+constexpr std::ostream& operator<<(std::ostream& os, const NazgulName nazgul_name)
 {
-    switch (weapon_type)
+    switch (nazgul_name)
     {
         case NazgulName::Khamul: os << "Khamul"; break;
         case NazgulName::Murazor: os << "Murazor"; break;
@@ -40,9 +42,9 @@ constexpr std::ostream& operator<<(std::ostream& os, const NazgulName weapon_typ
     return os;
 }
 
-[[nodiscard]] constexpr std::string toString(const NazgulName weapon_type)
+[[nodiscard]] constexpr std::string toString(const NazgulName nazgul_name)
 {
-    switch (weapon_type)
+    switch (nazgul_name)
     {
         case NazgulName::Khamul: return "Khamul"s;
         case NazgulName::Murazor: return "Murazor"s;
@@ -56,5 +58,7 @@ constexpr std::ostream& operator<<(std::ostream& os, const NazgulName weapon_typ
         default: throw std::runtime_error("Unexpected NazgulName enum value");
     }
 }
+} // namespace dp
+
 
 #endif //NAZGUL_NAME_H

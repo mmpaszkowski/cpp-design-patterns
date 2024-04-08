@@ -10,6 +10,8 @@
 #include <memory>
 #include <vector>
 
+namespace dp
+{
 class Nazgul
 {
 public:
@@ -27,5 +29,6 @@ private:
 
 constexpr Nazgul::Nazgul(NazgulName name) noexcept : name_(name) {}
 
+} // namespace dp
 
 #endif //NAZGUL_H

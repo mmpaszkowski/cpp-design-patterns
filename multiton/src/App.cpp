@@ -6,6 +6,8 @@
 #include "App.h"
 #include "Nazgul.h"
 
+using namespace dp;
+
 void App::run() const
 {
     std::cout << "Printing out eagerly initialized multiton contents\n";

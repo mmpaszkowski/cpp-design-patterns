@@ -5,6 +5,8 @@
 #include <gtest/gtest.h>
 #include <Nazgul.h>
 
+using namespace dp;
+
 TEST(nazgul, test_get_instance)
 {
     std::vector<NazgulName> nazguls_names{

@@ -4,15 +4,18 @@
 #include "Nazgul.h"
 #include <memory>
 
-const Nazgul& Nazgul::getInstance(NazgulName name) {
-    if(nazguls_.empty())
+namespace dp
+{
+const Nazgul& Nazgul::getInstance(NazgulName name)
+{
+    if (nazguls_.empty())
         init();
     return *nazguls_[name];
 }
 
-NazgulName    Nazgul::getName() const noexcept { return name_; }
+NazgulName Nazgul::getName() const noexcept { return name_; }
 
-void          Nazgul::init()
+void       Nazgul::init()
 {
     struct TemporaryPublicConstructor : public Nazgul
     {
@@ -31,3 +34,4 @@ void          Nazgul::init()
 }
 
 std::map<NazgulName, std::unique_ptr<Nazgul>> Nazgul::nazguls_;
+} // namespace dp

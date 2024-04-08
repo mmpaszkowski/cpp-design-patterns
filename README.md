@@ -29,7 +29,7 @@ Planned design patterns
 | collecting-parameter                   |        :x:         |     :x:     |                         |
 | collection-pipeline                    |        :x:         |     :x:     |                         |
 | combinator                             |        :x:         |     :x:     |                         |
-| command                                |        :x:         |     :x:     |                         |
+| command                                | :heavy_check_mark: |     :x:     |                         |
 | commander                              |        :x:         |     :x:     |                         |
 | component                              |        :x:         |     :x:     |                         |
 | composite                              |        :x:         |     :x:     |                         |
