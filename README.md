@@ -17,7 +17,7 @@ Planned design patterns
 | arrange-act-assert                     | :heavy_check_mark: |     :x:     |                         |
 | async-method-invocation                |        :x:         |     :x:     |                         |
 | balking                                |        :x:         |     :x:     |                         |
-| bridge                                 |        :x:         |     :x:     |                         |
+| bridge                                 | :heavy_check_mark: |     :x:     |                         |
 | builder                                | :heavy_check_mark: |     :x:     |                         |
 | business-delegate                      |        :x:         |     :x:     |                         |
 | bytecode                               |        :x:         |     :x:     |                         |
