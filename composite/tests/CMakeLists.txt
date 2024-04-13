@@ -9,7 +9,8 @@ FetchContent_MakeAvailable(googletest)
 add_library(GTest::GTest INTERFACE IMPORTED)
 target_link_libraries(GTest::GTest INTERFACE gtest_main)
 
-add_executable(composite-test app_test.cpp)
+add_executable(composite-test app_test.cpp
+        messenger_test.cpp)
 
 target_link_libraries(composite-test PRIVATE GTest::GTest composite)
 

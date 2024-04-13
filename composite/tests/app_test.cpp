@@ -10,3 +10,5 @@ TEST(composite, should_execute_application_without_exception)
     App app;
     ASSERT_NO_THROW(app.run());
 }
+
+
