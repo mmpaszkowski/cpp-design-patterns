@@ -32,7 +32,7 @@ Planned design patterns
 | command                                | :heavy_check_mark: |     :x:     |                         |
 | commander                              |        :x:         |     :x:     |                         |
 | component                              |        :x:         |     :x:     |                         |
-| composite                              |        :x:         |     :x:     |                         |
+| composite                              | :heavy_check_mark: |     :x:     |                         |
 | composite-entity                       |        :x:         |     :x:     |                         |
 | composite-view                         |        :x:         |     :x:     |                         |
 | context-object                         |        :x:         |     :x:     |                         |

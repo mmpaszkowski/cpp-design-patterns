@@ -1,11 +1,20 @@
 # SOURCES AND HEADERS
 set(LIBRARY_SOURCES
         src/App.cpp
+        src/LetterComposite.cpp
+        src/Word.cpp
+        src/Letter.cpp
+        src/Sentence.cpp
         )
 
 set(LIBRARY_HEADERS
         include/App.h
-        )
+        include/LetterComposite.h
+        include/Word.h
+        include/Letter.h
+        include/Sentence.h
+        include/Messenger.h
+)
 
 
 add_library(composite STATIC
