@@ -16,7 +16,7 @@ set(LIBRARY_HEADERS
         include/Part.h
         include/HasParts.h
         include/Car.h
-        )
+)
 
 add_library(abstract-document STATIC
         ${LIBRARY_SOURCES}

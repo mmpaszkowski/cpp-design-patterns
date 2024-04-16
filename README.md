@@ -44,7 +44,7 @@ Planned design patterns
 | data-locality                          |        :x:         |     :x:     |                         |
 | data-mapper                            |        :x:         |     :x:     |                         |
 | data-transfer-object                   |        :x:         |     :x:     |                         |
-| decorator                              |        :x:         |     :x:     |                         |
+| decorator                              | :heavy_check_mark: |     :x:     |                         |
 | delegation                             |        :x:         |     :x:     |                         |
 | dependency-injection                   |        :x:         |     :x:     |                         |
 | dirty-flag                             |        :x:         |     :x:     |                         |
