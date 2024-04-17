@@ -7,14 +7,12 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 add_library(GTest::GTest INTERFACE IMPORTED)
-add_library(GTest::GMock INTERFACE IMPORTED)
 target_link_libraries(GTest::GTest INTERFACE gtest_main)
-target_link_libraries(GTest::GMock INTERFACE gmock_main)
 
-add_executable(decorator-test app_test.cpp clubbed_troll_test.cpp
-        simple_troll_test.cpp)
+add_executable(facade-test app_test.cpp
+        dwarven_goldmine_facade.cpp)
 
-target_link_libraries(decorator-test PRIVATE GTest::GTest GTest::GMock decorator)
+target_link_libraries(facade-test PRIVATE GTest::GTest facade)
 
 enable_testing()
-add_test(decorator-test decorator-test)
+add_test(facade-test facade-test)

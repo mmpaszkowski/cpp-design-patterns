@@ -6,9 +6,9 @@ set(CMAKE_CXX_STANDARD 23)
 include(FetchContent)
 
 FetchContent_Declare(
-    spdlog
-    GIT_REPOSITORY https://github.com/gabime/spdlog.git
-    GIT_TAG        v1.x
+        spdlog
+        GIT_REPOSITORY https://github.com/gabime/spdlog.git
+        GIT_TAG v1.x
 )
 FetchContent_MakeAvailable(spdlog)
 
@@ -28,6 +28,7 @@ add_subdirectory(builder)
 add_subdirectory(command)
 add_subdirectory(composite)
 add_subdirectory(decorator)
+add_subdirectory(facade)
 add_subdirectory(factory-method)
 add_subdirectory(monostate)
 add_subdirectory(multiton)

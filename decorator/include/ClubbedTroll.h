@@ -15,10 +15,11 @@ class ClubbedTroll : public Troll
 {
 public:
     explicit constexpr ClubbedTroll(std::unique_ptr<Troll>&& troll) noexcept : decorated{std::move(troll)} {}
-    virtual constexpr ~ClubbedTroll() = default;
-    void attack() override;
-    int constexpr getAttackPower() override { return decorated->getAttackPower() + 10; }
-    void constexpr fleeBattle() override { decorated->fleeBattle(); }
+    constexpr ~ClubbedTroll() noexcept override = default;
+
+    void              attack() override;
+    [[nodiscard]] constexpr int getAttackPower() override { return decorated->getAttackPower() + 10; }
+    constexpr void              fleeBattle() override { decorated->fleeBattle(); }
 
 private:
     std::unique_ptr<Troll> decorated;

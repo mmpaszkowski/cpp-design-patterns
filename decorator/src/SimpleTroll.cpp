@@ -9,6 +9,6 @@ namespace dp
 {
 
 void SimpleTroll::attack() { spdlog::info("The troll tries to grab you!"); }
-int  SimpleTroll::getAttackPower() { return 10; }
+int  SimpleTroll::getAttackPower() noexcept { return 10; }
 void SimpleTroll::fleeBattle() { spdlog::info("The troll shrieks in horror and runs away!"); }
-}
+} // namespace dp

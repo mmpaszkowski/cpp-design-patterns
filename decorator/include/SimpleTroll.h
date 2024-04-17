@@ -16,7 +16,7 @@ class SimpleTroll : public Troll
 public:
     constexpr ~SimpleTroll() override = default;
     void attack() override;
-    int  getAttackPower() override;
+    int  getAttackPower() noexcept override;
     void fleeBattle() override;
 };
 } // namespace dp
