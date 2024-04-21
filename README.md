@@ -69,7 +69,7 @@ Planned design patterns
 | filterer                               |        :x:         |     :x:     |                         |
 | fluentinterface                        |        :x:         |     :x:     |                         |
 | flux                                   |        :x:         |     :x:     |                         |
-| flyweight                              |        :x:         |     :x:     |                         |
+| flyweight                              | :heavy_check_mark: |     :x:     |                         |
 | front-controller                       |        :x:         |     :x:     |                         |
 | game-loop                              |        :x:         |     :x:     |                         |
 | guarded-suspension                     |        :x:         |     :x:     |                         |
