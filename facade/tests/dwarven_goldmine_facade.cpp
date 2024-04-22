@@ -26,7 +26,7 @@ TEST(facade, dwarven_goldmine_facade_test)
     ASSERT_TRUE(logs.contains("Dwarven tunnel digger goes to the mine."));
 
     // No other actions were invoked, so the workers shouldn't have done (printed) anything else
-    ASSERT_EQ(6, std::count(logs.begin(), logs.end(), '\n'));
+    ASSERT_EQ(6, std::ranges::count(logs, '\n'));
 
     // Now do some actual work, start digging gold!
     testing::internal::CaptureStdout();
@@ -39,7 +39,7 @@ TEST(facade, dwarven_goldmine_facade_test)
     ASSERT_TRUE(logs.contains("Dwarven tunnel digger creates another promising tunnel."));
 
     // Again, they shouldn't be doing anything else.
-    ASSERT_EQ(3, std::count(logs.begin(), logs.end(), '\n'));
+    ASSERT_EQ(3, std::ranges::count(logs, '\n'));
 
     // Enough gold, lets end the day.
     testing::internal::CaptureStdout();
@@ -57,5 +57,5 @@ TEST(facade, dwarven_goldmine_facade_test)
     ASSERT_TRUE(logs.contains("Dwarven tunnel digger goes to sleep."));
 
     // Every worker should be sleeping now, no other actions allowed
-    ASSERT_EQ(6, std::count(logs.begin(), logs.end(), '\n'));
+    ASSERT_EQ(6, std::ranges::count(logs, '\n'));
 }

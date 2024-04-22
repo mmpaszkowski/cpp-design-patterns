@@ -16,6 +16,10 @@ set(LIBRARY_HEADERS
         include/Part.h
         include/HasParts.h
         include/Car.h
+        ../proxy/include/WizardTower.h
+        ../proxy/include/WizardTowerProxy.h
+        ../proxy/include/Wizard.h
+        ../proxy/include/IvoryTower.h
 )
 
 add_library(abstract-document STATIC
