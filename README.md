@@ -23,7 +23,7 @@ Planned design patterns
 | bytecode                               |        :x:         |     :x:     |                         |
 | caching                                |        :x:         |     :x:     |                         |
 | callback                               |        :x:         |     :x:     |                         |
-| chain-of-responsibility                |        :x:         |     :x:     |                         |
+| chain-of-responsibility                | :heavy_check_mark: |     :x:     |                         |
 | circuit-breaker                        |        :x:         |     :x:     |                         |
 | client-session                         |        :x:         |     :x:     |                         |
 | collecting-parameter                   |        :x:         |     :x:     |                         |
@@ -118,7 +118,7 @@ Planned design patterns
 | promise                                |        :x:         |     :x:     |                         |
 | property                               |        :x:         |     :x:     |                         |
 | prototype                              | :heavy_check_mark: |     :x:     |                         |
-| proxy                                  |        :x:         |     :x:     |                         |
+| proxy                                  | :heavy_check_mark: |     :x:     |                         |
 | queue-load-leveling                    |        :x:         |     :x:     |                         |
 | reactor                                |        :x:         |     :x:     |                         |
 | reader-writer-lock                     |        :x:         |     :x:     |                         |

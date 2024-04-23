@@ -20,6 +20,7 @@ set(LIBRARY_HEADERS
         ../proxy/include/WizardTowerProxy.h
         ../proxy/include/Wizard.h
         ../proxy/include/IvoryTower.h
+        ../chain-of-responsibility/include/App.h
 )
 
 add_library(abstract-document STATIC
