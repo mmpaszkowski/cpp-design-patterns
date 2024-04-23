@@ -21,11 +21,7 @@ public:
     [[nodiscard]] constexpr int         getPriority() const noexcept override { return 3; }
     [[nodiscard]] constexpr std::string name() const noexcept override { return "Orc officer"; }
 
-    void                                handle(Request& req) const noexcept override
-    {
-        req.markHandled();
-        spdlog::info(name() + " handling request \"{" + req.toString() + "}\"");
-    }
+    void                                handle(Request& req) const noexcept override;
 };
 } // namespace dp
 
