@@ -77,7 +77,7 @@ Planned design patterns
 | hexagonal                              |        :x:         |     :x:     |                         |
 | identity-map                           |        :x:         |     :x:     |                         |
 | intercepting-filter                    |        :x:         |     :x:     |                         |
-| interpreter                            |        :x:         |     :x:     |                         |
+| interpreter                            | :heavy_check_mark: |     :x:     |                         |
 | iterator                               |        :x:         |     :x:     |                         |
 | layers                                 |        :x:         |     :x:     |                         |
 | lazy-loading                           |        :x:         |     :x:     |                         |
