@@ -15,7 +15,7 @@ const Nazgul& Nazgul::getInstance(NazgulName name)
 
 NazgulName Nazgul::getName() const noexcept { return name_; }
 
-void       Nazgul::init()
+void Nazgul::init()
 {
     struct TemporaryPublicConstructor : public Nazgul
     {
