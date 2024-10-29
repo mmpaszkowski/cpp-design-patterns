@@ -10,7 +10,7 @@
 
 namespace dp
 {
-using std::literals::string_literals::operator""s;
+using namespace std::literals::string_literals;
 
 enum class WeaponType
 {

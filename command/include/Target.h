@@ -18,7 +18,7 @@ public:
     [[nodiscard]] constexpr Size                getSize() const noexcept;
     [[nodiscard]] constexpr Visibility          getVisibility() const noexcept;
 
-    constexpr void                              printStatus() const;
+    void                                        printStatus() const;
     constexpr void                              changeSize() noexcept;
     constexpr void                              changeVisibility() noexcept;
 
@@ -35,11 +35,7 @@ constexpr Size       Target::getSize() const noexcept { return size_; }
 
 constexpr Visibility Target::getVisibility() const noexcept { return visibility_; }
 
-constexpr void       dp::Target::printStatus() const
-{
-    std::cout << this->toString() << ", [size=" << size_ << "], [visibility=" << visibility_ << "]" << std::endl;
-}
-constexpr void Target::changeSize() noexcept { size_ = size_ == Size::Normal ? Size::Small : Size::Normal; }
+constexpr void       Target::changeSize() noexcept { size_ = size_ == Size::Normal ? Size::Small : Size::Normal; }
 
 constexpr void Target::changeVisibility() noexcept
 {

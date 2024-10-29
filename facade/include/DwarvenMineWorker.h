@@ -24,13 +24,13 @@ public:
 public:
     virtual constexpr ~DwarvenMineWorker() = default;
 
-    virtual constexpr void goToSleep() const { spdlog::info(name() + " goes to sleep."); }
+    virtual void goToSleep() const { spdlog::info(name() + " goes to sleep."); }
 
-    virtual constexpr void wakeUp() const { spdlog::info(name() + " wakes up."); }
+    virtual void wakeUp() const { spdlog::info(name() + " wakes up."); }
 
-    virtual constexpr void goHome() const { spdlog::info(name() + " goes home."); }
+    virtual void goHome() const { spdlog::info(name() + " goes home."); }
 
-    virtual constexpr void goToMine() const { spdlog::info(name() + " goes to the mine."); }
+    virtual void goToMine() const { spdlog::info(name() + " goes to the mine."); }
 
 private:
     constexpr void action(Action action) const noexcept

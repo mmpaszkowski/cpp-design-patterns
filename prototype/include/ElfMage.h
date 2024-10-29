@@ -24,9 +24,10 @@ public:
     constexpr ElfMage& operator=(ElfMage&& other) noexcept;
     constexpr ~ElfMage() override;
 
-    constexpr bool                                operator==(const Mage& other) const override;
-    [[nodiscard]] constexpr std::string           toString() const override;
-    [[nodiscard]] constexpr std::unique_ptr<Mage> clone() const override;
+    [[nodiscard]] constexpr bool        operator==(const Mage& other) const override;
+    [[nodiscard]] constexpr bool        operator!=(const Mage& other) const override;
+    [[nodiscard]] constexpr std::string toString() const override;
+    [[nodiscard]] std::unique_ptr<Mage> clone() const override { return std::make_unique<ElfMage>(*this); }
 
 private:
     std::string weapon_;
@@ -57,15 +58,24 @@ constexpr bool ElfMage::operator==(const Mage& other) const
     }
 }
 
+constexpr bool ElfMage::operator!=(const Mage& other) const
+{
+    try
+    {
+        auto otherElfMage = dynamic_cast<const ElfMage&>(other);
+        return weapon_ != otherElfMage.weapon_;
+    }
+    catch (const std::bad_cast&)
+    {
+        return true;
+    }
+}
+
 constexpr std::string ElfMage::toString() const
 {
     return "Elven mage helps in " + weapon_;
 }
 
-constexpr std::unique_ptr<Mage> ElfMage::clone() const
-{
-    return std::make_unique<ElfMage>(*this);
-}
 } // namespace dp
 
 #endif //ELF_MAGE_H_

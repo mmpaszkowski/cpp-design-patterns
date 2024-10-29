@@ -1,6 +1,7 @@
 # SOURCES AND HEADERS
 set(LIBRARY_SOURCES
         src/App.cpp
+        src/Target.cpp
         src/Wizzard.cpp
         )
 
@@ -17,7 +18,7 @@ set(LIBRARY_HEADERS
 
 add_library(command STATIC
         ${LIBRARY_SOURCES}
-        ${LIBRARY_HEADERS})
+        ${LIBRARY_HEADERS} )
 
 target_link_libraries(command spdlog)
 

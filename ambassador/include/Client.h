@@ -13,7 +13,7 @@ private:
 
 public:
     Client();
-    [[nodiscard]] long useService(int value) const;
+    long useService(int value) const;
 };
 
 #endif //CPP_DESIGN_PATTERNS_CLIENT_H

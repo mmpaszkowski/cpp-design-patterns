@@ -24,9 +24,10 @@ public:
     constexpr OrcMage& operator=(OrcMage&& other) noexcept;
     constexpr ~OrcMage() override;
 
-    constexpr bool                                operator==(const Mage& other) const override;
+    [[nodiscard]] constexpr bool                  operator==(const Mage& other) const override;
+    [[nodiscard]] constexpr bool                  operator!=(const Mage& other) const override;
     [[nodiscard]] constexpr std::string           toString() const override;
-    [[nodiscard]] constexpr std::unique_ptr<Mage> clone() const override;
+    [[nodiscard]] std::unique_ptr<Mage>           clone() const override { return std::make_unique<OrcMage>(*this); }
 
 private:
     std::string weapon_;
@@ -57,15 +58,24 @@ constexpr bool OrcMage::operator==(const Mage& other) const
     }
 }
 
+constexpr bool OrcMage::operator!=(const Mage& other) const
+{
+    try
+    {
+        auto otherOrcMage = dynamic_cast<const OrcMage&>(other);
+        return weapon_ != otherOrcMage.weapon_;
+    }
+    catch (const std::bad_cast&)
+    {
+        return true;
+    }
+}
+
 constexpr std::string OrcMage::toString() const
 {
     return "Orcish mage attacks with " + weapon_;
 }
 
-constexpr std::unique_ptr<Mage> OrcMage::clone() const
-{
-    return std::make_unique<OrcMage>(*this);
-}
 } // namespace dp
 
 #endif //ORC_MAGE_H_

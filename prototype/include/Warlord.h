@@ -14,7 +14,8 @@ class Warlord
 {
 public:
     constexpr virtual ~Warlord()                                                                    = default;
-    constexpr virtual bool                                   operator==(const Warlord& other) const = 0;
+    [[nodiscard]] constexpr virtual bool                     operator==(const Warlord& other) const = 0;
+    [[nodiscard]] constexpr virtual bool                     operator!=(const Warlord& other) const = 0;
     [[nodiscard]] virtual constexpr std::string              toString() const                       = 0;
     [[nodiscard]] virtual constexpr std::unique_ptr<Warlord> clone() const                          = 0;
 };

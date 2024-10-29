@@ -36,10 +36,10 @@ public:
 protected:
     constexpr virtual void printThisBefore() const {}
     constexpr virtual void printThisAfter() const {}
-    constexpr void         add(std::unique_ptr<LetterComposite>&& letter) { children.push_back(std::move(letter)); }
+    constexpr void         add(std::shared_ptr<LetterComposite>&& letter) { children.push_back(std::move(letter)); }
 
 private:
-    std::vector<std::unique_ptr<LetterComposite>> children;
+    std::vector<std::shared_ptr<LetterComposite>> children;
 };
 } // namespace dp
 

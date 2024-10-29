@@ -20,7 +20,7 @@ size_t                               LoadBalancer::lastServedId;
 LoadBalancer::Construct              LoadBalancer::construct;
 LoadBalancer::Construct::Construct()
 {
-    size_t id = 0;
+    int id = 0;
     for (auto port : {8080, 8081, 8082, 8083, 8084})
         LoadBalancer::servers.push_back(std::make_unique<StandardOutputServer>("localhost", port, id++));
     LoadBalancer::lastServedId = 0ull;

@@ -19,7 +19,7 @@ enum class PotionType
     Poison
 };
 
-using std::literals::string_literals::operator""s;
+using namespace std::literals::string_literals;
 
 constexpr std::ostream& operator<<(std::ostream& os, const PotionType potion_type)
 {

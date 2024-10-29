@@ -12,7 +12,7 @@ namespace dp
 class DwarvenGoldDigger : public DwarvenMineWorker
 {
 public:
-    void constexpr work() const override { spdlog::info(name() + " digs for gold."); }
+    void work() const override { spdlog::info(name() + " digs for gold."); }
     [[nodiscard]] constexpr std::string name() const override { return "Dwarf gold digger"; }
 };
 } // namespace dp

@@ -24,12 +24,12 @@ public:
         workers.push_back(std::make_unique<DwarvenTunnelDigger>());
     }
 
-    constexpr void startNewDay() const
+    void startNewDay() const
     {
         makeActions(workers, {DwarvenMineWorker::Action::WakeUp, DwarvenMineWorker::Action::GoToMine});
     }
-    constexpr void digOutGold() { makeActions(workers, {DwarvenMineWorker::Action::Work}); }
-    constexpr void endDay()
+    void digOutGold() { makeActions(workers, {DwarvenMineWorker::Action::Work}); }
+    void endDay()
     {
         makeActions(workers, {DwarvenMineWorker::Action::GoHome, DwarvenMineWorker::Action::GoToSleep});
     }

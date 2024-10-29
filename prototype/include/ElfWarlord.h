@@ -24,9 +24,10 @@ public:
     constexpr ElfWarlord& operator=(ElfWarlord&& other) noexcept;
     constexpr ~ElfWarlord() override;
 
-    constexpr bool                                   operator==(const Warlord& other) const override;
-    [[nodiscard]] constexpr std::string              toString() const override;
-    [[nodiscard]] constexpr std::unique_ptr<Warlord> clone() const override;
+    [[nodiscard]] constexpr bool           operator==(const Warlord& other) const override;
+    [[nodiscard]] constexpr bool           operator!=(const Warlord& other) const override;
+    [[nodiscard]] constexpr std::string    toString() const override;
+    [[nodiscard]] std::unique_ptr<Warlord> clone() const override { return std::make_unique<ElfWarlord>(*this); }
 
 private:
     std::string weapon_;
@@ -57,15 +58,24 @@ constexpr bool ElfWarlord::operator==(const Warlord& other) const
     }
 }
 
+constexpr bool ElfWarlord::operator!=(const Warlord& other) const
+{
+    try
+    {
+        auto otherElfWarlord = dynamic_cast<const ElfWarlord&>(other);
+        return weapon_ != otherElfWarlord.weapon_;
+    }
+    catch (const std::bad_cast&)
+    {
+        return true;
+    }
+}
+
 constexpr std::string ElfWarlord::toString() const
 {
     return "Elven warlord helps in " + weapon_;
 }
 
-constexpr std::unique_ptr<Warlord> ElfWarlord::clone() const
-{
-    return std::make_unique<ElfWarlord>(*this);
-}
 } // namespace dp
 
 #endif //ELF_WARLORD_H_

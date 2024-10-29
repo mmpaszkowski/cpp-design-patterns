@@ -14,7 +14,8 @@ class Beast
 {
 public:
     constexpr virtual ~Beast()                                                                  = default;
-    constexpr virtual bool                                 operator==(const Beast& other) const = 0;
+    [[nodiscard]] constexpr virtual bool                   operator==(const Beast& other) const { return false; }
+    [[nodiscard]] constexpr virtual bool                   operator!=(const Beast& other) const { return false; }
     [[nodiscard]] virtual constexpr std::string            toString() const                     = 0;
     [[nodiscard]] virtual constexpr std::unique_ptr<Beast> clone() const                        = 0;
 };

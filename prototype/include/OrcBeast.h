@@ -24,9 +24,10 @@ public:
     constexpr OrcBeast& operator=(OrcBeast&& other) noexcept;
     constexpr ~OrcBeast() override;
 
-    constexpr bool                                 operator==(const Beast& other) const override;
-    [[nodiscard]] constexpr std::string            toString() const override;
-    [[nodiscard]] constexpr std::unique_ptr<Beast> clone() const override;
+    [[nodiscard]] constexpr bool         operator==(const Beast& other) const override;
+    [[nodiscard]] constexpr bool         operator!=(const Beast& other) const override;
+    [[nodiscard]] constexpr std::string  toString() const override;
+    [[nodiscard]] std::unique_ptr<Beast> clone() const override { return std::make_unique<OrcBeast>(*this); }
 
 private:
     std::string weapon_;
@@ -57,15 +58,24 @@ constexpr bool OrcBeast::operator==(const Beast& other) const
     }
 }
 
+constexpr bool OrcBeast::operator!=(const Beast& other) const
+{
+    try
+    {
+        auto otherElfBeast = dynamic_cast<const OrcBeast&>(other);
+        return weapon_ != otherElfBeast.weapon_;
+    }
+    catch (const std::bad_cast&)
+    {
+        return true;
+    }
+}
+
 constexpr std::string OrcBeast::toString() const
 {
     return "Orcish wolf attacks with " + weapon_;
 }
 
-constexpr std::unique_ptr<Beast> OrcBeast::clone() const
-{
-    return std::make_unique<OrcBeast>(*this);
-}
 } // namespace dp
 
 #endif //ORC_BEAST_H_
