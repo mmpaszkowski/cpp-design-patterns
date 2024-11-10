@@ -78,7 +78,7 @@ Planned design patterns
 | identity-map                           |        :x:         |     :x:     |                         |
 | intercepting-filter                    |        :x:         |     :x:     |                         |
 | interpreter                            | :heavy_check_mark: |     :x:     |                         |
-| iterator                               |        :x:         |     :x:     |                         |
+| iterator                               | :heavy_check_mark: |     :x:     |                         |
 | layers                                 |        :x:         |     :x:     |                         |
 | lazy-loading                           |        :x:         |     :x:     |                         |
 | leader-election                        |        :x:         |     :x:     |                         |
@@ -88,7 +88,7 @@ Planned design patterns
 | marker                                 |        :x:         |     :x:     |                         |
 | master-worker-pattern                  |        :x:         |     :x:     |                         |
 | mediator                               |        :x:         |     :x:     |                         |
-| memento                                |        :x:         |     :x:     |                         |
+| memento                                | :heavy_check_mark: |     :x:     |                         |
 | metadata-mapping                       |        :x:         |     :x:     |                         |
 | model-view-controller                  |        :x:         |     :x:     |                         |
 | model-view-intent                      |        :x:         |     :x:     |                         |

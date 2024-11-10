@@ -2,19 +2,36 @@
 // Created by noname on 6/29/24.
 //
 
-#ifndef MEMBER_H
-#define MEMBER_H
+#ifndef PARTY_MEMBER_H
+#define PARTY_MEMBER_H
 
-#include "Party.h"
+#include "Action.h"
+#include <memory>
+#include <spdlog/spdlog.h>
+#include <string>
 
 namespace dp
 {
-    class PartyMember {
-    public:
-        virtual void joinedParty(Party party) = 0;
-        virtual void partyAction(Action action) = 0;
-        virtual void act(Action action) = 0;
-    };
+class Party;
+
+class PartyMember : public std::enable_shared_from_this<PartyMember>
+{
+public:
+    virtual ~PartyMember() = default;
+
+public:
+    virtual std::string toString() const noexcept = 0;
+    virtual void        act(Action action);
+
+protected: // Interface for Party class
+    virtual void partyAction(Action action) const;
+    virtual void joinedParty(std::weak_ptr<Party> party) noexcept;
+
+private:
+    std::weak_ptr<Party> party;
+
+    friend Party;
+};
 }
 
-#endif //MEMBER_H
+#endif //PARTY_MEMBER_H
