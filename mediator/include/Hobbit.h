@@ -12,12 +12,14 @@ namespace dp
 class Hobbit : public PartyMember
 {
 private:
-    struct Private {};
+    constexpr Hobbit() noexcept : PartyMember() {}
 
 public:
-    constexpr Hobbit(Private) noexcept : PartyMember() {}
     ~Hobbit() override = default;
-    static std::shared_ptr<Hobbit> create() { return std::make_shared<Hobbit>(Private()); }
+    static std::shared_ptr<Hobbit> create() { 
+        struct TemporaryPublicConstructor : public Hobbit { };
+        return std::make_shared<TemporaryPublicConstructor>(); 
+    }
 
 public:
     constexpr std::string toString() const noexcept override { return "Hobbit"; }

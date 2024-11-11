@@ -12,11 +12,14 @@ namespace dp
 class Rogue : public PartyMember
 {
 private:
-    struct Private {};
+    constexpr Rogue() noexcept : PartyMember() {}
+
 public:
-    constexpr Rogue(Private) noexcept : PartyMember() {}
     ~Rogue() override = default;
-    static std::shared_ptr<Rogue> create() { return std::make_shared<Rogue>(Private()); }
+    static std::shared_ptr<Rogue> create() { 
+        struct TemporaryPublicConstructor : public Rogue {};
+        return std::make_shared<TemporaryPublicConstructor>();
+    }
 
 public:
     constexpr std::string toString() const noexcept override { return "Rouge"; }

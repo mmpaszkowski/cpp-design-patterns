@@ -12,24 +12,24 @@
 #include <Rogue.h>
 #include <Wizard.h>
 
-class MockPartyMember : public dp::PartyMember
+class MockPartyMember_JoinedParty : public dp::PartyMember
 {
 public:
-    MockPartyMember() = default;
+    MockPartyMember_JoinedParty() = default;
 
 public:
     MOCK_METHOD(void, joinedParty, (std::weak_ptr<dp::Party> party), (noexcept, override));
-    MOCK_METHOD(void, partyAction, (dp::Action action), (const, override));
-    MOCK_METHOD(void, act, (dp::Action action), (override));
-    MOCK_METHOD(std::string, toString, (), (const, noexcept, override));
+    void partyAction(dp::Action action) const override { PartyMember::partyAction(action); }
+    void act(dp::Action action) override { act(action); }
+    std::string toString() const noexcept override { return "MockPartyMember_JoinedParty"; }
 };
 
 using ::testing::_;
 
 TEST(party_member, joined_party)
 {
-    auto partyMember1 = std::make_shared<MockPartyMember>();
-    auto partyMember2 = std::make_shared<MockPartyMember>();
+    auto partyMember1 = std::make_shared<MockPartyMember_JoinedParty>();
+    auto partyMember2 = std::make_shared<MockPartyMember_JoinedParty>();
     auto party        = dp::Party::create();
 
     EXPECT_CALL(*partyMember1, joinedParty(_)).Times(1);
@@ -39,26 +39,56 @@ TEST(party_member, joined_party)
     party->addMember(partyMember2);
 }
 
-TEST(party, act_and_party_action)
+class MockPartyMember_PartyAction : public dp::PartyMember
 {
-    auto partyMember1 = std::make_shared<MockPartyMember>();
-    auto partyMember2 = std::make_shared<MockPartyMember>();
-    auto partyMember3 = std::make_shared<MockPartyMember>();
+public:
+    MockPartyMember_PartyAction() = default;
+
+public:
+    void joinedParty(std::weak_ptr<dp::Party> party) noexcept override { PartyMember::joinedParty(party); }
+    MOCK_METHOD(void, partyAction, (dp::Action action), (const, override));
+    void        act(dp::Action action) override { PartyMember::act(action); }
+    std::string toString() const noexcept override { return "MockPartyMember_PartyAction"; }
+};
+
+TEST(party_member, party_action)
+{
+    auto partyMember1 = std::make_shared<MockPartyMember_PartyAction>();
+    auto partyMember2 = std::make_shared<MockPartyMember_PartyAction>();
+    auto partyMember3 = std::make_shared<MockPartyMember_PartyAction>();
 
     auto party        = dp::Party::create();
 
-    EXPECT_CALL(*partyMember1, joinedParty(_)).Times(1);
     party->addMember(partyMember1);
-    party->act(partyMember1, dp::Action::Gold);
+    partyMember1->act(dp::Action::Gold);
 
-    EXPECT_CALL(*partyMember2, joinedParty(_)).Times(1);
     party->addMember(partyMember2);
     EXPECT_CALL(*partyMember1, partyAction(dp::Action::Enemy)).Times(1);
-    party->act(partyMember2, dp::Action::Enemy);
+    partyMember2->act(dp::Action::Enemy);
 
-    EXPECT_CALL(*partyMember3, joinedParty(_)).Times(1);
     party->addMember(partyMember3);
     EXPECT_CALL(*partyMember1, partyAction(dp::Action::Hunt)).Times(1);
     EXPECT_CALL(*partyMember2, partyAction(dp::Action::Hunt)).Times(1);
-    party->act(partyMember3, dp::Action::Hunt);
+    partyMember3->act(dp::Action::Hunt);
+}
+
+TEST(party_member, act_and_party_action)
+{
+    auto partyMember1 = std::make_shared<MockPartyMember_PartyAction>();
+    auto partyMember2 = std::make_shared<MockPartyMember_PartyAction>();
+    auto partyMember3 = std::make_shared<MockPartyMember_PartyAction>();
+
+    auto party = dp::Party::create();
+
+    party->addMember(partyMember1);
+    partyMember1->act(dp::Action::Gold);
+
+    party->addMember(partyMember2);
+    EXPECT_CALL(*partyMember1, partyAction(dp::Action::Enemy)).Times(1);
+    partyMember2->act(dp::Action::Enemy);
+
+    party->addMember(partyMember3);
+    EXPECT_CALL(*partyMember1, partyAction(dp::Action::Hunt)).Times(1);
+    EXPECT_CALL(*partyMember2, partyAction(dp::Action::Hunt)).Times(1);
+    partyMember3->act(dp::Action::Hunt);
 }

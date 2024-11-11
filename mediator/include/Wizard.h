@@ -12,11 +12,14 @@ namespace dp
 class Wizard : public PartyMember
 {
 private:
-    struct Private {};
+    constexpr Wizard() noexcept : PartyMember() {}
+
 public:
-    constexpr Wizard(Private) noexcept : PartyMember() {}
     ~Wizard() override = default;
-    static std::shared_ptr<Wizard> create() { return std::make_shared<Wizard>(Private()); }
+    static std::shared_ptr<Wizard> create() { 
+        struct TemporaryPublicConstructor : public Wizard {};
+        return std::make_shared<TemporaryPublicConstructor>(); 
+    }
 
 public:
     constexpr std::string toString() const noexcept override { return "Wizard"; }

@@ -25,7 +25,17 @@ public:
     MOCK_METHOD(void, act, (dp::Action action), (override));
     MOCK_METHOD(std::string, toString, (), (const, noexcept, override));
 };
+
 using ::testing::_;
+
+class MockParty : public dp::Party
+{
+public:
+    MockParty() = default;
+
+public:
+    MOCK_METHOD(void, act, (std::shared_ptr<dp::PartyMember> actor, dp::Action action), (const, override));
+};
 
 TEST(party, add_member_and_size)
 {
@@ -46,3 +56,12 @@ TEST(party, add_member_and_size)
     ASSERT_EQ(party->size(), 4);
 }
 
+TEST(party, act)
+{
+    auto partyMember1 = dp::Hobbit::create();
+
+    auto party = std::make_shared<MockParty>();
+    party->addMember(partyMember1);
+    EXPECT_CALL(*party, act(_, dp::Action::Hunt)).Times(1);
+    partyMember1->act(dp::Action::Hunt);
+}

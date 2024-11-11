@@ -12,12 +12,14 @@ namespace dp
 class Hunter : public PartyMember
 {
 private:
-    struct Private {};
+    constexpr Hunter() noexcept : PartyMember() {}
 
 public:
-    constexpr Hunter(Private) noexcept : PartyMember() {}
     ~Hunter() override = default;
-    static std::shared_ptr<Hunter> create() { return std::make_shared<Hunter>(Private()); }
+    static std::shared_ptr<Hunter> create() { 
+        struct TemporaryPublicConstructor : public Hunter { };
+        return std::make_shared<TemporaryPublicConstructor>(); 
+    }
 
 public:
     constexpr std::string toString() const noexcept override { return "Hunter"; }

@@ -2,6 +2,7 @@
 // Created by noname on 29.10.24.
 //
 #include "Party.h"
+#include "PartyMember.h"
 
 namespace dp
 {
