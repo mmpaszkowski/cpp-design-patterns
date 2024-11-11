@@ -1,5 +1,5 @@
 //
-// Created by noname on 04.11.24.
+// Created by Mateusz Paszkowski on 11.11.2024.
 //
 
 #include <Hunter.h>
