@@ -21,12 +21,13 @@ protected:
 
 public:
     [[nodiscard]] static std::shared_ptr<Mammoth> create();
+    [[nodiscard]] std::string                     toString() const { return "The mammoth"; }
+    const State&                                  getState() const { return *state; }
     void                                          timePasses();
     void                                          observe() const;
-    [[nodiscard]] std::string                     toString() const { return "The mammoth"; }
 
 private:
-    void changeStateTo(std::shared_ptr<State> newState) const;
+    void changeStateTo(std::shared_ptr<State> newState);
 
 private:
     std::shared_ptr<State> state;

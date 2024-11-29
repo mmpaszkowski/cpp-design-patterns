@@ -22,7 +22,7 @@ public:
     }
 
 public:
-    constexpr std::string toString() const noexcept override { return "Rouge"; }
+    constexpr std::string toString() const noexcept override { return "Rogue"; }
 };
 } // namespace dp
 

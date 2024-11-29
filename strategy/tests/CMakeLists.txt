@@ -9,9 +9,9 @@ FetchContent_MakeAvailable(googletest)
 add_library(GTest::GTest INTERFACE IMPORTED)
 target_link_libraries(GTest::GTest INTERFACE gtest_main)
 
-add_executable(state-test app_test.cpp mammoth_test.cpp)
+add_executable(strategy-test app_test.cpp)
 
-target_link_libraries(state-test PRIVATE GTest::GTest state)
+target_link_libraries(strategy-test PRIVATE GTest::GTest strategy)
 
 enable_testing()
-add_test(state-test state-test)
+add_test(strategy-test strategy-test)

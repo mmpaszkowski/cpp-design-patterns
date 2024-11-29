@@ -32,8 +32,9 @@ void Mammoth::observe() const
     this->state->observe(); 
 }
 
-void Mammoth::changeStateTo(std::shared_ptr<State> newState) const
+void Mammoth::changeStateTo(std::shared_ptr<State> newState)
 {
+    this->state = newState;
     this->state->onEnterState();
 }
 } // namespace dp
