@@ -19,8 +19,6 @@ public:
 
 public:
     MOCK_METHOD(void, joinedParty, (std::weak_ptr<dp::Party> party), (noexcept, override));
-    void partyAction(dp::Action action) const override { PartyMember::partyAction(action); }
-    void act(dp::Action action) override { act(action); }
     std::string toString() const noexcept override { return "MockPartyMember_JoinedParty"; }
 };
 
@@ -45,9 +43,7 @@ public:
     MockPartyMember_PartyAction() = default;
 
 public:
-    void joinedParty(std::weak_ptr<dp::Party> party) noexcept override { PartyMember::joinedParty(party); }
     MOCK_METHOD(void, partyAction, (dp::Action action), (const, override));
-    void        act(dp::Action action) override { PartyMember::act(action); }
     std::string toString() const noexcept override { return "MockPartyMember_PartyAction"; }
 };
 

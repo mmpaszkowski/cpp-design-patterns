@@ -5,7 +5,7 @@
 #include <gtest/gtest.h>
 #include <App.h>
 
-TEST(state, should_execute_application_without_exception)
+TEST(template_, should_execute_application_without_exception)
 {
     App app;
     ASSERT_NO_THROW(app.run());
