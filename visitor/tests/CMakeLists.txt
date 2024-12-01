@@ -12,9 +12,11 @@ add_library(GTest::GMock INTERFACE IMPORTED)
 target_link_libraries(GTest::GTest INTERFACE gtest_main)
 target_link_libraries(GTest::GMock INTERFACE gmock_main)
 
-add_executable(strategy-test app_test.cpp dragon_slayer_test.cpp)
+target_link_libraries(GTest::GTest INTERFACE gtest_main gmock_main)
 
-target_link_libraries(strategy-test PRIVATE GTest::GTest GTest::GMock strategy)
+add_executable(visitor-test app_test.cpp commander_test.cpp "sergeant_test.cpp" "soldier_test.cpp" "visitors_test.cpp")
+
+target_link_libraries(visitor-test PRIVATE GTest::GTest visitor)
 
 enable_testing()
-add_test(strategy-test strategy-test)
+add_test(visitor-test visitor-test)

@@ -16,6 +16,7 @@ public:
     DragonSlayer(std::shared_ptr<DragonSlayingStrategy> strategy) : strategy(strategy) {}
     void changeStrategy(std::shared_ptr<DragonSlayingStrategy> strategy) { this->strategy = strategy; }
     void goToBattle() { strategy->execute(); }
+    [[nodiscard]] const DragonSlayingStrategy& getStrategy() const { return *strategy; }
 
 private:
     std::shared_ptr<DragonSlayingStrategy> strategy;
