@@ -9,13 +9,7 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
-using testing::_;
 using testing::An;
-using testing::Matcher;
-using testing::TypedEq;
-using testing::ByRef;
-
-bool operator==(const dp::Soldier& unit1, const dp::Soldier& unit2) { return &unit1 == &unit2; }
 
 class MockVisitor : public dp::UnitVisitor
 {
@@ -24,11 +18,6 @@ public:
     MOCK_METHOD(void, visit, (const dp::Sergeant& soldier), (const, override));
     MOCK_METHOD(void, visit, (const dp::Commander& soldier), (const, override));
 };
-
-//MATCHER_P(IsSoldier, expected, "")
-//{
-//    return arg.getId() == expected.getId(); // Just an example based on an ID field
-//}
 
 TEST(visit, commander)
 {

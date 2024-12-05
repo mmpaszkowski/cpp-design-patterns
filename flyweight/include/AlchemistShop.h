@@ -18,7 +18,7 @@ class AlchemistShop
     std::vector<std::shared_ptr<const Potion>> bottom_shelf;
 
 public:
-    constexpr AlchemistShop()
+    AlchemistShop()
     {
         PotionFactory factory;
         top_shelf.push_back(factory.createPotion(PotionType::Invisibility));
