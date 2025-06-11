@@ -1,6 +1,11 @@
+//
+// Created by Mateusz Paszkowski on 01.07.2023.
+//
+
 #include <App.h>
 
-int main() {
+int main()
+{
     App app;
     app.run();
 }

@@ -3,7 +3,7 @@ set(LIBRARY_SOURCES
     src/AngryState.cpp
     src/App.cpp
     src/Mammoth.cpp
-    src/Peacefulstate.cpp
+    src/PeacefulState.cpp
 )
 
 set(LIBRARY_HEADERS

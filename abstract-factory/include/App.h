@@ -1,27 +1,24 @@
 //
-// Created by noname on 29.06.23.
+// Created by Mateusz Paszkowski on 29.06.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_APP_H
 #define CPP_DESIGN_PATTERNS_APP_H
 
-#include <memory>
 #include "Kingdom.h"
+#include <memory>
 
-class App {
-
-public:
-    App();
-    ~App() { delete kingdom; }
+class App
+{
 
 public:
-    [[nodiscard]] Kingdom *getKingdom() { return kingdom; }
+    [[nodiscard]] const Kingdom& getKingdom() const { return *kingdom; }
 
-    void run();
-    void createKingdom(KingdomType kingdomType);
+    void                         run();
+    void                         createKingdom(KingdomType kingdomType);
 
 private:
-    Kingdom *kingdom;
+    std::unique_ptr<Kingdom> kingdom;
 };
 
 #endif //CPP_DESIGN_PATTERNS_APP_H

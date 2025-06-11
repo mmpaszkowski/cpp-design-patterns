@@ -1,11 +1,7 @@
 //
-// Created by noname on 29.06.23.
+// Created by Mateusz Paszkowski on 29.06.2023.
 //
 
 #include "../include/OrcArmy.h"
 
-const std::string OrcArmy::DESCRIPTION = "This is the orc army!";
-
-const std::string &OrcArmy::getDescription() const noexcept {
-    return OrcArmy::DESCRIPTION;
-}
+std::string_view OrcArmy::getDescription() const noexcept { return DESCRIPTION; }

@@ -1,5 +1,5 @@
 //
-// Created by noname on 29.06.23.
+// Created by Mateusz Paszkowski on 29.06.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_ORC_ARMY_H
@@ -10,10 +10,9 @@
 class OrcArmy : public Army
 {
 public:
-    const static std::string DESCRIPTION;
+    static constexpr std::string_view               DESCRIPTION = "This is the orc army!";
 
-public:
-    [[nodiscard]] const std::string &getDescription() const noexcept override;
+    [[nodiscard]] std::string_view getDescription() const noexcept override;
 };
 
 #endif //CPP_DESIGN_PATTERNS_ORC_ARMY_H

@@ -1,50 +1,46 @@
 //
-// Created by noname on 29.06.23.
+// Created by Mateusz Paszkowski on 29.06.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_KINGDOM_H
 #define CPP_DESIGN_PATTERNS_KINGDOM_H
 
-#include <stdexcept>
-
-#include "King.h"
-#include "Castle.h"
 #include "Army.h"
+#include "Castle.h"
+#include "King.h"
 #include "KingdomFactory.h"
-#include "ElfKingdomFactory.h"
-#include "OrcKingdomFactory.h"
 
-enum class KingdomType {
-    ELF, ORC
+enum class KingdomType
+{
+    Elf,
+    Orc
 };
 
-class Kingdom {
+class Kingdom
+{
 public:
-    class FactoryMaker {
+    class FactoryMaker
+    {
     public:
-        static KingdomFactory *makeFactory(KingdomType type);
+        static std::unique_ptr<KingdomFactory> makeFactory(KingdomType type);
     };
 
-    Kingdom() noexcept : king(nullptr), castle(nullptr), army(nullptr) {}
+    Kingdom(std::unique_ptr<King>&& king, std::unique_ptr<Castle>&& castle, std::unique_ptr<Army>&& army);
 
-    virtual ~Kingdom() {
-        delete king;
-        delete castle;
-        delete army;
-    }
+    virtual ~Kingdom() = default;
 
-    [[nodiscard]] King   *getKing()   const { return this->king; }
-    [[nodiscard]] Castle *getCastle() const { return this->castle; }
-    [[nodiscard]] Army   *getArmy()   const { return this->army; }
+    [[nodiscard]] const King&   getKing() const { return *this->king_; }
+    [[nodiscard]] const Castle& getCastle() const { return *this->castle_; }
+    [[nodiscard]] const Army&   getArmy() const { return *this->army_; }
 
-    void setKing  (King *pKing)     { this->king = pKing; }
-    void setCastle(Castle *pCastle) { this->castle = pCastle; }
-    void setArmy  (Army *pArmy)     { this->army = pArmy; }
+    void                        setKing(std::unique_ptr<King>&& king) { this->king_ = std::move(king); }
+    void                        setCastle(std::unique_ptr<Castle>&& castle) { this->castle_ = std::move(castle); }
+    void                        setArmy(std::unique_ptr<Army>&& army) { this->army_ = std::move(army); }
 
 private:
-    King *king;
-    Castle *castle;
-    Army *army;
+    std::unique_ptr<King>   king_;
+    std::unique_ptr<Castle> castle_;
+    std::unique_ptr<Army>   army_;
 };
 
 

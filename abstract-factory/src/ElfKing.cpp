@@ -1,11 +1,7 @@
 //
-// Created by noname on 29.06.23.
+// Created by Mateusz Paszkowski on 29.06.2023.
 //
 
 #include "../include/ElfKing.h"
 
-const std::string ElfKing::DESCRIPTION = "This is the elven king!";
-
-const std::string &ElfKing::getDescription() const noexcept {
-    return ElfKing::DESCRIPTION;
-}
+std::string_view ElfKing::getDescription() const noexcept { return DESCRIPTION; }

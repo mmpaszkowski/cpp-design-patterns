@@ -1,29 +1,21 @@
 //
-// Created by noname on 29.06.23.
+// Created by Mateusz Paszkowski on 29.06.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_ELF_KINGDOM_FACTORY_H
 #define CPP_DESIGN_PATTERNS_ELF_KINGDOM_FACTORY_H
 
-#include "KingdomFactory.h"
+#include "ElfArmy.h"
 #include "ElfCastle.h"
 #include "ElfKing.h"
-#include "ElfArmy.h"
+#include "KingdomFactory.h"
 
-class ElfKingdomFactory : public KingdomFactory {
-
+class ElfKingdomFactory : public KingdomFactory
+{
 public:
-    [[nodiscard]] Castle* createCastle() const override {
-        return new ElfCastle();
-    }
-
-    [[nodiscard]] King* createKing() const override {
-        return new ElfKing();
-    }
-
-    [[nodiscard]] Army* createArmy() const override {
-        return new ElfArmy();
-    }
+    [[nodiscard]] std::unique_ptr<Castle> createCastle() const override { return std::make_unique<ElfCastle>(); }
+    [[nodiscard]] std::unique_ptr<King>   createKing() const override { return std::make_unique<ElfKing>(); }
+    [[nodiscard]] std::unique_ptr<Army>   createArmy() const override { return std::make_unique<ElfArmy>(); }
 };
 
 #endif //CPP_DESIGN_PATTERNS_ELF_KINGDOM_FACTORY_H
