@@ -8,6 +8,8 @@
 #include "Kingdom.h"
 #include <memory>
 
+namespace dp
+{
 class App
 {
 
@@ -20,5 +22,7 @@ public:
 private:
     std::unique_ptr<Kingdom> kingdom;
 };
+} // namespace dp
+
 
 #endif //CPP_DESIGN_PATTERNS_APP_H

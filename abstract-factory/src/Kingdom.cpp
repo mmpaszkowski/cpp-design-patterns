@@ -6,6 +6,8 @@
 #include "ElfKingdomFactory.h"
 #include "OrcKingdomFactory.h"
 
+namespace dp
+{
 std::unique_ptr<KingdomFactory> Kingdom::FactoryMaker::makeFactory(KingdomType type)
 {
     switch (type)
@@ -20,3 +22,4 @@ Kingdom::Kingdom(std::unique_ptr<King>&& king, std::unique_ptr<Castle>&& castle,
     : king_(std::move(king)), castle_(std::move(castle)), army_(std::move(army))
 {
 }
+} // namespace dp

@@ -5,6 +5,8 @@
 #include <App.h>
 #include <gtest/gtest.h>
 
+using namespace dp;
+
 TEST(abstract_factory, should_execute_application_without_exception)
 {
     App app;

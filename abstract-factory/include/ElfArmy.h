@@ -7,12 +7,14 @@
 
 #include "Army.h"
 
+namespace dp
+{
 class ElfArmy : public Army
 {
 public:
     static constexpr std::string_view DESCRIPTION = "This is the elven army!";
-
     [[nodiscard]] std::string_view    getDescription() const noexcept override;
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_ELF_ARMY_H

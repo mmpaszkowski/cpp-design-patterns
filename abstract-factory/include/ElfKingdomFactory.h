@@ -10,6 +10,8 @@
 #include "ElfKing.h"
 #include "KingdomFactory.h"
 
+namespace dp
+{
 class ElfKingdomFactory : public KingdomFactory
 {
 public:
@@ -17,5 +19,6 @@ public:
     [[nodiscard]] std::unique_ptr<King>   createKing() const override { return std::make_unique<ElfKing>(); }
     [[nodiscard]] std::unique_ptr<Army>   createArmy() const override { return std::make_unique<ElfArmy>(); }
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_ELF_KINGDOM_FACTORY_H

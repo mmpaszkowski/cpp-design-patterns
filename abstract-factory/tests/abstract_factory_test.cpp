@@ -10,6 +10,8 @@
 #include <OrcKing.h>
 #include <gtest/gtest.h>
 
+using namespace dp;
+
 struct KingdomTestParams
 {
     KingdomType      kingdomType;

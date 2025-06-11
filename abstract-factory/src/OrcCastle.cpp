@@ -4,4 +4,7 @@
 
 #include "../include/OrcCastle.h"
 
+namespace dp
+{
 std::string_view OrcCastle::getDescription() const noexcept { return DESCRIPTION; }
+} // namespace dp

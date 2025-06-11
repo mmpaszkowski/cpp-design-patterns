@@ -7,12 +7,14 @@
 
 #include "Castle.h"
 
+namespace dp
+{
 class OrcCastle : public Castle
 {
 public:
-    static constexpr std::string_view               DESCRIPTION = "This is the orc castle!";
-
-    [[nodiscard]]std::string_view getDescription() const noexcept override;
+    static constexpr std::string_view DESCRIPTION = "This is the orc castle!";
+    [[nodiscard]] std::string_view    getDescription() const noexcept override;
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_ORC_CASTLE_H

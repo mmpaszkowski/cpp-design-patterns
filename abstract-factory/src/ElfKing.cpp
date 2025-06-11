@@ -4,4 +4,7 @@
 
 #include "../include/ElfKing.h"
 
+namespace dp
+{
 std::string_view ElfKing::getDescription() const noexcept { return DESCRIPTION; }
+} // namespace dp

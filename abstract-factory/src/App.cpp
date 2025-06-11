@@ -7,7 +7,8 @@
 
 using spdlog::info;
 
-
+namespace dp
+{
 void App::run()
 {
     info("elf kingdom");
@@ -31,3 +32,4 @@ void App::createKingdom(const KingdomType kingdomType)
     auto       army           = kingdomFactory->createArmy();
     kingdom                   = std::make_unique<Kingdom>(std::move(king), std::move(castle), std::move(army));
 }
+} // namespace dp

@@ -7,12 +7,15 @@
 
 #include "King.h"
 
+namespace dp
+{
 class OrcKing : public King
 {
 public:
-    static constexpr std::string_view               DESCRIPTION = "This is the orc king!";
+    static constexpr std::string_view DESCRIPTION = "This is the orc king!";
 
-    [[nodiscard]] std::string_view getDescription() const noexcept override;
+    [[nodiscard]] std::string_view    getDescription() const noexcept override;
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_ORC_KING_H

@@ -7,6 +7,8 @@
 
 #include "Castle.h"
 
+namespace dp
+{
 class ElfCastle : public Castle
 {
 public:
@@ -14,5 +16,6 @@ public:
 
     [[nodiscard]] std::string_view    getDescription() const noexcept override;
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_ELF_CASTLE_H

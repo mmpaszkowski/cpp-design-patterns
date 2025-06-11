@@ -7,6 +7,8 @@
 
 #include <memory>
 
+namespace dp
+{
 class Army;
 class Castle;
 class King;
@@ -20,5 +22,6 @@ public:
     [[nodiscard]] virtual std::unique_ptr<King>   createKing() const   = 0;
     [[nodiscard]] virtual std::unique_ptr<Army>   createArmy() const   = 0;
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_KINGDOM_FACTORY_H

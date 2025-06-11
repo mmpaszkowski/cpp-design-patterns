@@ -7,12 +7,14 @@
 
 #include "Army.h"
 
+namespace dp
+{
 class OrcArmy : public Army
 {
 public:
-    static constexpr std::string_view               DESCRIPTION = "This is the orc army!";
-
-    [[nodiscard]] std::string_view getDescription() const noexcept override;
+    static constexpr std::string_view DESCRIPTION = "This is the orc army!";
+    [[nodiscard]] std::string_view    getDescription() const noexcept override;
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_ORC_ARMY_H

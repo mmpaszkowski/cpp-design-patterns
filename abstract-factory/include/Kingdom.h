@@ -10,6 +10,8 @@
 #include "King.h"
 #include "KingdomFactory.h"
 
+namespace dp
+{
 enum class KingdomType
 {
     Elf,
@@ -42,6 +44,6 @@ private:
     std::unique_ptr<Castle> castle_;
     std::unique_ptr<Army>   army_;
 };
-
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_KINGDOM_H

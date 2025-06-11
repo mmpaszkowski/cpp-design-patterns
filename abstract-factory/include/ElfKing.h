@@ -7,12 +7,14 @@
 
 #include "King.h"
 
+namespace dp
+{
 class ElfKing : public King
 {
 public:
     static constexpr std::string_view DESCRIPTION = "This is the elven king!";
-
     [[nodiscard]] std::string_view    getDescription() const noexcept override;
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_ELF_KING_H
