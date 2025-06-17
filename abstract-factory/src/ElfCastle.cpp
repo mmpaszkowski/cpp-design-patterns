@@ -6,5 +6,6 @@
 
 namespace dp
 {
-std::string_view ElfCastle::getDescription() const noexcept { return DESCRIPTION; }
+std::string ElfCastle::getDescription() const { return std::string(DESCRIPTION); }
+
 } // namespace dp

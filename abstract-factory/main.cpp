@@ -6,6 +6,6 @@
 
 int main()
 {
-    App app;
+    dp::App app;
     app.run();
 }

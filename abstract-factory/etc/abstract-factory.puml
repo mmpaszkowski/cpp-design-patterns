@@ -1,0 +1,105 @@
+@startuml
+package dp.abstract-factory {
+  class App {
+    - kingdom_ : Kingdom
+
+    + run()
+    - setUpKingdom(KingdomType kingdomType)
+  }
+
+  class FactoryMaker {
+    + static std::unique_ptr<KingdomFactory> makeFactory(KingdomType type);
+  }
+
+  class Kingdom {
+    - army_ : std::unique_ptr<Army>
+    - castle_ : std::unique_ptr<Castle>
+    - king_ : std::unique_ptr<King>
+
+    + Kingdom(std::unique_ptr<King>&& king, std::unique_ptr<Castle>&& castle, std::unique_ptr<Army>&& army);
+    + getArmy() : Army
+    + getCastle() : Castle
+    + getKing() : King
+  }
+
+  enum KingdomType {
+    + Elf {static}
+    + Orc {static}
+  }
+
+  interface Army {
+    + getDescription() : string_view {abstract}
+  }
+
+  interface Castle {
+    + getDescription() : string_view {abstract}
+  }
+
+  class ElfArmy {
+    + DESCRIPTION : string_view {static}
+    + getDescription() : string_view
+  }
+
+  class ElfCastle {
+    + DESCRIPTION : string_view {static}
+    + getDescription() : string_view
+  }
+
+  class ElfKing {
+    + DESCRIPTION : string_view {static}
+    + getDescription() : string_view
+  }
+
+  class ElfKingdomFactory {
+    + std::unique_ptr<Army> createArmy(): Army
+    + std::unique_ptr<Castle> createCastle(): Castle
+    + std::unique_ptr<King> createKing(): King
+  }
+
+  interface King {
+    + getDescription() : string_view {abstract}
+  }
+
+  interface KingdomFactory {
+    + std::unique_ptr<Army> createArmy(): Army {abstract}
+    + std::unique_ptr<Castle> createCastle(): Castle {abstract}
+    + std::unique_ptr<King> createKing(): King {abstract}
+  }
+
+  class OrcArmy {
+    + DESCRIPTION : string_view {static}
+    + getDescription() : string_view
+  }
+
+  class OrcCastle {
+    + DESCRIPTION : string_view {static}
+    + getDescription() : string_view
+  }
+
+  class OrcKing {
+    + DESCRIPTION : string_view {static}
+    + getDescription() : string_view
+  }
+  class OrcKingdomFactory {
+    + std::unique_ptr<Army> createArmy(): Army
+    + std::unique_ptr<Castle> createCastle(): Castle
+    + std::unique_ptr<King> createKing(): King
+  }
+}
+
+KingdomType <.. FactoryMaker
+Kingdom *-- Castle
+FactoryMaker <.. Kingdom
+KingdomFactory <.. FactoryMaker
+Kingdom ..* App
+Kingdom *-- King
+Kingdom *-- Army
+ElfArmy ..|> Army
+ElfCastle ..|> Castle
+ElfKing ..|> King
+ElfKingdomFactory ..|> KingdomFactory
+OrcArmy ..|> Army
+OrcCastle ..|> Castle
+OrcKing ..|> King
+OrcKingdomFactory ..|> KingdomFactory
+@enduml

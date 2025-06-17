@@ -6,5 +6,5 @@
 
 namespace dp
 {
-std::string_view OrcKing::getDescription() const noexcept { return DESCRIPTION; }
+std::string OrcKing::getDescription() const { return std::string(DESCRIPTION); }
 } // namespace dp

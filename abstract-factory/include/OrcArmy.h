@@ -9,12 +9,26 @@
 
 namespace dp
 {
+
+/**
+ * @class OrcArmy
+ * @brief Concrete implementation of the Army interface representing an orc army.
+ *
+ * Provides a description of the orc army.
+ */
 class OrcArmy : public Army
 {
 public:
+    /// Description constant for the orc army.
     static constexpr std::string_view DESCRIPTION = "This is the orc army!";
-    [[nodiscard]] std::string_view    getDescription() const noexcept override;
+
+    /**
+     * @brief Returns the description of the orc army.
+     * @return A string with the orc army description.
+     */
+    [[nodiscard]] std::string getDescription() const override;
 };
+
 } // namespace dp
 
-#endif //CPP_DESIGN_PATTERNS_ORC_ARMY_H
+#endif // CPP_DESIGN_PATTERNS_ORC_ARMY_H

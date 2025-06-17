@@ -7,7 +7,7 @@
 
 using namespace dp;
 
-TEST(abstract_factory, should_execute_application_without_exception)
+TEST(AbstractFactory, ApplicationExecution_NoThrowsException)
 {
     App app;
     ASSERT_NO_THROW(app.run());

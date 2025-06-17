@@ -1,6 +1,7 @@
 //
 // Created by Mateusz Paszkowski on 01.07.2023.
 //
+
 #include <App.h>
 #include <ElfArmy.h>
 #include <ElfCastle.h>
@@ -20,10 +21,10 @@ struct KingdomTestParams
     std::string_view expectedArmyDescription;
 };
 
-class AbstractFactoryTest : public ::testing::TestWithParam<KingdomTestParams>
+class AbstractFactory : public ::testing::TestWithParam<KingdomTestParams>
 {
 protected:
-    void                         SetUp() override { app.createKingdom(GetParam().kingdomType); }
+    void                         SetUp() override { app.setUpKingdom(GetParam().kingdomType); }
     [[nodiscard]] const Kingdom& getKingdom() const { return app.getKingdom(); }
 
 private:
@@ -31,26 +32,25 @@ private:
 };
 
 INSTANTIATE_TEST_SUITE_P(
-    AbstractFactoryTests,
     AbstractFactoryTest,
+    AbstractFactory,
     ::testing::Values(
         KingdomTestParams{KingdomType::Elf, ElfKing::DESCRIPTION, ElfCastle::DESCRIPTION, ElfArmy::DESCRIPTION},
         KingdomTestParams{KingdomType::Orc, OrcKing::DESCRIPTION, OrcCastle::DESCRIPTION, OrcArmy::DESCRIPTION}));
 
-// Now define your actual tests
-TEST_P(AbstractFactoryTest, CreatedKingdom_HasCorrectKing)
+TEST_P(AbstractFactory, CreatedKingdom_HasCorrectKing)
 {
     const auto& king = getKingdom().getKing();
     ASSERT_EQ(GetParam().expectedKingDescription, king.getDescription());
 }
 
-TEST_P(AbstractFactoryTest, CreatedKingdom_HasCorrectCastle)
+TEST_P(AbstractFactory, CreatedKingdom_HasCorrectCastle)
 {
     const auto& castle = getKingdom().getCastle();
     ASSERT_EQ(GetParam().expectedCastleDescription, castle.getDescription());
 }
 
-TEST_P(AbstractFactoryTest, CreatedKingdom_HasCorrectArmy)
+TEST_P(AbstractFactory, CreatedKingdom_HasCorrectArmy)
 {
     const auto& army = getKingdom().getArmy();
     ASSERT_EQ(GetParam().expectedArmyDescription, army.getDescription());

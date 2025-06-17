@@ -9,13 +9,26 @@
 
 namespace dp
 {
+
+/**
+ * @class OrcKing
+ * @brief Concrete implementation of the King interface representing an orc king.
+ *
+ * Provides a description of the orc king.
+ */
 class OrcKing : public King
 {
 public:
+    /// Description constant for the orc king.
     static constexpr std::string_view DESCRIPTION = "This is the orc king!";
 
-    [[nodiscard]] std::string_view    getDescription() const noexcept override;
+    /**
+     * @brief Returns the description of the orc king.
+     * @return A string with the orc king description.
+     */
+    [[nodiscard]] std::string getDescription() const override;
 };
+
 } // namespace dp
 
-#endif //CPP_DESIGN_PATTERNS_ORC_KING_H
+#endif // CPP_DESIGN_PATTERNS_ORC_KING_H

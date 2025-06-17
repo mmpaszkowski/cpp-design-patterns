@@ -12,17 +12,17 @@ namespace dp
 {
 class App
 {
-
 public:
-    [[nodiscard]] const Kingdom& getKingdom() const { return *kingdom; }
-
+    [[nodiscard]] const Kingdom& getKingdom() const { return *kingdom_; }
     void                         run();
-    void                         createKingdom(KingdomType kingdomType);
+    void                         setUpKingdom(KingdomType kingdomType);
+
+protected:
+    void logKingdomDetails(KingdomType kingdomType);
 
 private:
-    std::unique_ptr<Kingdom> kingdom;
+    std::unique_ptr<Kingdom> kingdom_;
 };
 } // namespace dp
-
 
 #endif //CPP_DESIGN_PATTERNS_APP_H

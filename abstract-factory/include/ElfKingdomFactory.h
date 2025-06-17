@@ -12,13 +12,38 @@
 
 namespace dp
 {
+
+/**
+ * @class ElfKingdomFactory
+ * @brief Concrete factory that creates Elf kingdom components.
+ *
+ * Implements the Abstract Factory pattern to produce Elf variants of Castle, King, and Army.
+ */
 class ElfKingdomFactory : public KingdomFactory
 {
 public:
+    /**
+     * @brief Creates an ElfCastle instance.
+     *
+     * @return A unique_ptr to the created ElfCastle.
+     */
     [[nodiscard]] std::unique_ptr<Castle> createCastle() const override { return std::make_unique<ElfCastle>(); }
-    [[nodiscard]] std::unique_ptr<King>   createKing() const override { return std::make_unique<ElfKing>(); }
-    [[nodiscard]] std::unique_ptr<Army>   createArmy() const override { return std::make_unique<ElfArmy>(); }
+
+    /**
+     * @brief Creates an ElfKing instance.
+     *
+     * @return A unique_ptr to the created ElfKing.
+     */
+    [[nodiscard]] std::unique_ptr<King> createKing() const override { return std::make_unique<ElfKing>(); }
+
+    /**
+     * @brief Creates an ElfArmy instance.
+     *
+     * @return A unique_ptr to the created ElfArmy.
+     */
+    [[nodiscard]] std::unique_ptr<Army> createArmy() const override { return std::make_unique<ElfArmy>(); }
 };
+
 } // namespace dp
 
-#endif //CPP_DESIGN_PATTERNS_ELF_KINGDOM_FACTORY_H
+#endif // CPP_DESIGN_PATTERNS_ELF_KINGDOM_FACTORY_H
