@@ -1,123 +1,121 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css"
      data-diagram-type="CLASS" height="612px" preserveAspectRatio="none"
-     style="width:299px;height:612px;background:#FFFFFF;" version="1.1" viewBox="0 0 299 612" width="299px"
+     style="width:293px;height:612px;background:#FFFFFF;" version="1.1" viewBox="0 0 293 612" width="293px"
      zoomAndPan="magnify">
-    <title>Adapter Pattern - FishingBoat Example</title>
+    <title>Adapter Pattern</title>
     <defs/>
     <g>
         <g class="title" data-source-line="1">
             <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
-                  textLength="271.4309" x="10" y="24.9659">Adapter Pattern - FishingBoat Example
+                  textLength="113.4135" x="82.7932" y="24.9659">Adapter Pattern
             </text>
         </g><!--cluster dp-->
         <g class="cluster" data-entity="dp" data-source-line="3" data-uid="ent0002" id="cluster_dp">
-            <path d="M14.7155,46.6699 L33.4394,46.6699 A3.75,3.75 0 0 1 35.9394,49.1699 L42.9394,71.7378 L289.7155,71.7378 A2.5,2.5 0 0 1 292.2155,74.2378 L292.2155,603.1699 A2.5,2.5 0 0 1 289.7155,605.6699 L14.7155,605.6699 A2.5,2.5 0 0 1 12.2155,603.1699 L12.2155,49.1699 A2.5,2.5 0 0 1 14.7155,46.6699"
+            <path d="M8.5,46.6699 L27.2239,46.6699 A3.75,3.75 0 0 1 29.7239,49.1699 L36.7239,71.7378 L283.5,71.7378 A2.5,2.5 0 0 1 286,74.2378 L286,603.1699 A2.5,2.5 0 0 1 283.5,605.6699 L8.5,605.6699 A2.5,2.5 0 0 1 6,603.1699 L6,49.1699 A2.5,2.5 0 0 1 8.5,46.6699"
                   fill="none" style="stroke:#000000;stroke-width:1.5;"/>
-            <line style="stroke:#000000;stroke-width:1.5;" x1="12.2155" x2="42.9394" y1="71.7378" y2="71.7378"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="36.7239" y1="71.7378" y2="71.7378"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
-                  textLength="17.7239" x="16.2155" y="63.6358">dp
+                  textLength="17.7239" x="10" y="63.6358">dp
             </text>
         </g><!--class RowingBoat-->
         <g class="entity" data-entity="RowingBoat" data-source-line="5" data-uid="ent0003" id="entity_RowingBoat">
             <rect fill="#F1F1F1" height="67.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
-                  width="106.7317" x="98.7155" y="249.6699"/>
-            <ellipse cx="113.7155" cy="265.6699" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
-            <path d="M109.7467,272.1699 L109.7467,270.4668 L112.1061,270.2011 L112.1061,261.998 L109.7467,261.7324 L109.7467,260.0293 L116.8873,260.0293 L116.8873,261.7324 L114.4655,261.998 L114.4655,270.2011 L116.8873,270.4668 L116.8873,272.1699 L109.7467,272.1699 Z "
+                  width="106.7317" x="92.5" y="249.6699"/>
+            <ellipse cx="107.5" cy="265.6699" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M103.5313,272.1699 L103.5313,270.4668 L105.8906,270.2011 L105.8906,261.998 L103.5313,261.7324 L103.5313,260.0293 L110.6719,260.0293 L110.6719,261.7324 L108.25,261.998 L108.25,270.2011 L110.6719,270.4668 L110.6719,272.1699 L103.5313,272.1699 Z "
                   fill="#000000"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing"
-                  textLength="74.7317" x="127.7155" y="271.1019">RowingBoat
+                  textLength="74.7317" x="121.5" y="271.1019">RowingBoat
             </text>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="99.7155" x2="204.4472" y1="281.6699" y2="281.6699"/>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="99.7155" x2="204.4472" y1="289.6699" y2="289.6699"/>
-            <ellipse cx="109.7155" cy="304.7039" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="93.5" x2="198.2317" y1="281.6699" y2="281.6699"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="93.5" x2="198.2317" y1="289.6699" y2="289.6699"/>
+            <ellipse cx="103.5" cy="304.7039" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.8517"
-                  x="118.7155" y="308.6358">row(): void
+                  x="112.5" y="308.6358">row(): void
             </text>
         </g><!--class FishingBoat-->
         <g class="entity" data-entity="FishingBoat" data-source-line="9" data-uid="ent0004" id="entity_FishingBoat">
             <rect fill="#F1F1F1" height="67.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
-                  width="109.5877" x="97.2155" y="522.6699"/>
-            <ellipse cx="112.2155" cy="538.6699" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
-            <path d="M111.6842,545.5918 Q109.9342,545.5918 108.7936,544.8574 Q107.6686,544.1074 107.1061,542.7636 Q106.5592,541.4043 106.5592,539.6074 Q106.5592,537.5761 107.2155,536.123 Q107.8717,534.6699 109.153,533.8886 Q110.4342,533.1074 112.3092,533.1074 Q113.1998,533.1074 113.8717,533.2949 Q114.5436,533.4668 115.2311,533.8105 L114.4186,535.8261 Q113.7936,535.5136 113.2467,535.3886 Q112.7155,535.2636 112.2311,535.2636 Q111.0592,535.2636 110.3561,535.7949 Q109.653,536.3261 109.3561,537.2793 Q109.0592,538.2324 109.0592,539.498 Q109.0592,541.5136 109.778,542.4824 Q110.4967,543.4355 112.0905,543.4355 Q112.6842,543.4355 113.3092,543.2793 Q113.9342,543.123 114.7623,542.748 L114.7623,544.9668 Q114.028,545.2793 113.2311,545.4355 Q112.4498,545.5918 111.6842,545.5918 Z "
+                  width="109.5877" x="91" y="522.6699"/>
+            <ellipse cx="106" cy="538.6699" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M105.4688,545.5918 Q103.7188,545.5918 102.5781,544.8574 Q101.4531,544.1074 100.8906,542.7636 Q100.3438,541.4043 100.3438,539.6074 Q100.3438,537.5761 101,536.123 Q101.6563,534.6699 102.9375,533.8886 Q104.2188,533.1074 106.0938,533.1074 Q106.9844,533.1074 107.6563,533.2949 Q108.3281,533.4668 109.0156,533.8105 L108.2031,535.8261 Q107.5781,535.5136 107.0313,535.3886 Q106.5,535.2636 106.0156,535.2636 Q104.8438,535.2636 104.1406,535.7949 Q103.4375,536.3261 103.1406,537.2793 Q102.8438,538.2324 102.8438,539.498 Q102.8438,541.5136 103.5625,542.4824 Q104.2813,543.4355 105.875,543.4355 Q106.4688,543.4355 107.0938,543.2793 Q107.7188,543.123 108.5469,542.748 L108.5469,544.9668 Q107.8125,545.2793 107.0156,545.4355 Q106.2344,545.5918 105.4688,545.5918 Z "
                   fill="#000000"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.5877"
-                  x="126.2155" y="544.1019">FishingBoat
+                  x="120" y="544.1019">FishingBoat
             </text>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="98.2155" x2="205.8032" y1="554.6699" y2="554.6699"/>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="98.2155" x2="205.8032" y1="562.6699" y2="562.6699"/>
-            <ellipse cx="108.2155" cy="577.7039" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="92" x2="199.5877" y1="554.6699" y2="554.6699"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="92" x2="199.5877" y1="562.6699" y2="562.6699"/>
+            <ellipse cx="102" cy="577.7039" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.3797"
-                  x="117.2155" y="581.6358">sail(): void
+                  x="111" y="581.6358">sail(): void
             </text>
         </g><!--class FishingBoatAdapter-->
         <g class="entity" data-entity="FishingBoatAdapter" data-source-line="13" data-uid="ent0005"
            id="entity_FishingBoatAdapter">
             <rect fill="#F1F1F1" height="86.1358" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
-                  width="162.3395" x="71.2155" y="376.6699"/>
-            <ellipse cx="86.2155" cy="392.6699" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
-            <path d="M85.6842,399.5918 Q83.9342,399.5918 82.7936,398.8574 Q81.6686,398.1074 81.1061,396.7636 Q80.5592,395.4043 80.5592,393.6074 Q80.5592,391.5761 81.2155,390.123 Q81.8717,388.6699 83.153,387.8886 Q84.4342,387.1074 86.3092,387.1074 Q87.1998,387.1074 87.8717,387.2949 Q88.5436,387.4668 89.2311,387.8105 L88.4186,389.8261 Q87.7936,389.5136 87.2467,389.3886 Q86.7155,389.2636 86.2311,389.2636 Q85.0592,389.2636 84.3561,389.7949 Q83.653,390.3261 83.3561,391.2793 Q83.0592,392.2324 83.0592,393.498 Q83.0592,395.5136 83.778,396.4824 Q84.4967,397.4355 86.0905,397.4355 Q86.6842,397.4355 87.3092,397.2793 Q87.9342,397.123 88.7623,396.748 L88.7623,398.9668 Q88.028,399.2793 87.2311,399.4355 Q86.4498,399.5918 85.6842,399.5918 Z "
+                  width="162.3395" x="65" y="376.6699"/>
+            <ellipse cx="80" cy="392.6699" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M79.4688,399.5918 Q77.7188,399.5918 76.5781,398.8574 Q75.4531,398.1074 74.8906,396.7636 Q74.3438,395.4043 74.3438,393.6074 Q74.3438,391.5761 75,390.123 Q75.6563,388.6699 76.9375,387.8886 Q78.2188,387.1074 80.0938,387.1074 Q80.9844,387.1074 81.6563,387.2949 Q82.3281,387.4668 83.0156,387.8105 L82.2031,389.8261 Q81.5781,389.5136 81.0313,389.3886 Q80.5,389.2636 80.0156,389.2636 Q78.8438,389.2636 78.1406,389.7949 Q77.4375,390.3261 77.1406,391.2793 Q76.8438,392.2324 76.8438,393.498 Q76.8438,395.5136 77.5625,396.4824 Q78.2813,397.4355 79.875,397.4355 Q80.4688,397.4355 81.0938,397.2793 Q81.7188,397.123 82.5469,396.748 L82.5469,398.9668 Q81.8125,399.2793 81.0156,399.4355 Q80.2344,399.5918 79.4688,399.5918 Z "
                   fill="#000000"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130.3395"
-                  x="100.2155" y="398.1019">FishingBoatAdapter
+                  x="94" y="398.1019">FishingBoatAdapter
             </text>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="72.2155" x2="232.555" y1="408.6699" y2="408.6699"/>
-            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1;" width="6" x="79.2155" y="420.7039"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="66" x2="226.3395" y1="408.6699" y2="408.6699"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1;" width="6" x="73" y="420.7039"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121.1835"
-                  x="91.2155" y="427.6358">boat_: FishingBoat
+                  x="85" y="427.6358">boat_: FishingBoat
             </text>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="72.2155" x2="232.555" y1="435.7378" y2="435.7378"/>
-            <ellipse cx="82.2155" cy="450.7718" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="66" x2="226.3395" y1="435.7378" y2="435.7378"/>
+            <ellipse cx="76" cy="450.7718" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.8517"
-                  x="91.2155" y="454.7038">row(): void
+                  x="85" y="454.7038">row(): void
             </text>
         </g><!--class Captain-->
         <g class="entity" data-entity="Captain" data-source-line="18" data-uid="ent0006" id="entity_Captain">
             <rect fill="#F1F1F1" height="105.2038" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
-                  width="248.4171" x="28.2155" y="84.6699"/>
-            <ellipse cx="122.9321" cy="100.6699" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
-            <path d="M122.4009,107.5918 Q120.6509,107.5918 119.5102,106.8574 Q118.3852,106.1074 117.8227,104.7636 Q117.2759,103.4043 117.2759,101.6074 Q117.2759,99.5761 117.9321,98.123 Q118.5884,96.6699 119.8696,95.8886 Q121.1509,95.1074 123.0259,95.1074 Q123.9165,95.1074 124.5884,95.2949 Q125.2602,95.4668 125.9477,95.8105 L125.1352,97.8261 Q124.5102,97.5136 123.9634,97.3886 Q123.4321,97.2636 122.9477,97.2636 Q121.7759,97.2636 121.0727,97.7949 Q120.3696,98.3261 120.0727,99.2793 Q119.7759,100.2324 119.7759,101.498 Q119.7759,103.5136 120.4946,104.4824 Q121.2134,105.4355 122.8071,105.4355 Q123.4009,105.4355 124.0259,105.2793 Q124.6509,105.123 125.479,104.748 L125.479,106.9668 Q124.7446,107.2793 123.9477,107.4355 Q123.1665,107.5918 122.4009,107.5918 Z "
+                  width="248.4171" x="22" y="84.6699"/>
+            <ellipse cx="116.7167" cy="100.6699" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M116.1854,107.5918 Q114.4354,107.5918 113.2948,106.8574 Q112.1698,106.1074 111.6073,104.7636 Q111.0604,103.4043 111.0604,101.6074 Q111.0604,99.5761 111.7167,98.123 Q112.3729,96.6699 113.6542,95.8886 Q114.9354,95.1074 116.8104,95.1074 Q117.701,95.1074 118.3729,95.2949 Q119.0448,95.4668 119.7323,95.8105 L118.9198,97.8261 Q118.2948,97.5136 117.7479,97.3886 Q117.2167,97.2636 116.7323,97.2636 Q115.5604,97.2636 114.8573,97.7949 Q114.1542,98.3261 113.8573,99.2793 Q113.5604,100.2324 113.5604,101.498 Q113.5604,103.5136 114.2792,104.4824 Q114.9979,105.4355 116.5917,105.4355 Q117.1854,105.4355 117.8104,105.2793 Q118.4354,105.123 119.2635,104.748 L119.2635,106.9668 Q118.5292,107.2793 117.7323,107.4355 Q116.951,107.5918 116.1854,107.5918 Z "
                   fill="#000000"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.4838"
-                  x="143.4321" y="106.1019">Captain
+                  x="137.2167" y="106.1019">Captain
             </text>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="29.2155" x2="275.6326" y1="116.6699" y2="116.6699"/>
-            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1;" width="6" x="36.2155" y="128.7039"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="23" x2="269.4171" y1="116.6699" y2="116.6699"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1;" width="6" x="30" y="128.7039"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169.7493"
-                  x="48.2155" y="135.6358">rowingBoat_: RowingBoat
+                  x="42" y="135.6358">rowingBoat_: RowingBoat
             </text>
-            <line style="stroke:#181818;stroke-width:0.5;" x1="29.2155" x2="275.6326" y1="143.7378" y2="143.7378"/>
-            <ellipse cx="39.2155" cy="158.7718" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="23" x2="269.4171" y1="143.7378" y2="143.7378"/>
+            <ellipse cx="33" cy="158.7718" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="222.4171"
-                  x="48.2155" y="162.7038">Captain(rowingBoat: RowingBoat)
+                  x="42" y="162.7038">Captain(rowingBoat: RowingBoat)
             </text>
-            <ellipse cx="39.2155" cy="177.8397" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+            <ellipse cx="33" cy="177.8397" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
             <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.8517"
-                  x="48.2155" y="181.7717">row(): void
+                  x="42" y="181.7717">row(): void
             </text>
         </g><!--reverse link RowingBoat to FishingBoatAdapter-->
         <g class="link" data-entity-1="RowingBoat" data-entity-2="FishingBoatAdapter" data-source-line="24"
            data-uid="lnk7" id="link_RowingBoat_FishingBoatAdapter">
-            <path codeLine="24" d="M152.2155,334.7299 C152.2155,352.6899 152.2155,357.1899 152.2155,376.4899"
-                  fill="none" id="RowingBoat-backto-FishingBoatAdapter"
+            <path codeLine="24" d="M146,334.7299 C146,352.6899 146,357.1899 146,376.4899" fill="none"
+                  id="RowingBoat-backto-FishingBoatAdapter"
                   style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
-            <polygon fill="none" points="152.2155,316.7299,146.2155,334.7299,158.2155,334.7299,152.2155,316.7299"
+            <polygon fill="none" points="146,316.7299,140,334.7299,152,334.7299,146,316.7299"
                      style="stroke:#181818;stroke-width:1;"/>
         </g><!--reverse link FishingBoatAdapter to FishingBoat-->
         <g class="link" data-entity-1="FishingBoatAdapter" data-entity-2="FishingBoat" data-source-line="25"
            data-uid="lnk8" id="link_FishingBoatAdapter_FishingBoat">
-            <path codeLine="25" d="M152.2155,474.8599 C152.2155,494.1199 152.2155,504.5799 152.2155,522.5199"
-                  fill="none" id="FishingBoatAdapter-backto-FishingBoat" style="stroke:#181818;stroke-width:1;"/>
-            <polygon fill="none"
-                     points="152.2155,462.8599,148.2155,468.8599,152.2155,474.8599,156.2155,468.8599,152.2155,462.8599"
+            <path codeLine="25" d="M146,474.8599 C146,494.1199 146,504.5799 146,522.5199" fill="none"
+                  id="FishingBoatAdapter-backto-FishingBoat" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="none" points="146,462.8599,142,468.8599,146,474.8599,150,468.8599,146,462.8599"
                      style="stroke:#181818;stroke-width:1;"/>
         </g><!--reverse link Captain to RowingBoat-->
         <g class="link" data-entity-1="Captain" data-entity-2="RowingBoat" data-source-line="26" data-uid="lnk9"
            id="link_Captain_RowingBoat">
-            <path codeLine="26" d="M152.2155,201.7499 C152.2155,221.5999 152.2155,231.7099 152.2155,249.3299"
-                  fill="none" id="Captain-backto-RowingBoat" style="stroke:#181818;stroke-width:1;"/>
-            <polygon fill="none"
-                     points="152.2155,189.7499,148.2155,195.7499,152.2155,201.7499,156.2155,195.7499,152.2155,189.7499"
+            <path codeLine="26" d="M146,201.7499 C146,221.5999 146,231.7099 146,249.3299" fill="none"
+                  id="Captain-backto-RowingBoat" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="none" points="146,189.7499,142,195.7499,146,201.7499,150,195.7499,146,189.7499"
                      style="stroke:#181818;stroke-width:1;"/>
-        </g><!--SRC=[VP312i8m38RlUOeSDsG-mF2YecVn1KRSgWQwjgp52TDtjuNLTJ3jfIHy-Vy_SUoam6r3neaEJ-Jyfx308zixgzjEayF3areZ1O2YLbX3jS36u030ojFNK9zr7-a1qBzLf_iiB_6XkO4tG2t9sfdgo5bY-HUCsHPqGwEuUAOgqub9Pkz7YLMS7Ski-wOja-Jv3uE9hb8yk2HhRrxhzK9iMDX45xFxGamP-ec-D_W0]-->
+        </g><!--SRC=[VOz12i8m44NtSufPjaXxWE161TVY1ShOH1seIMc2NQXtTmB6Hgbc4-Rp__mtWKDdSAMf3sR07GNvB82bY_4zjGPrZpS0jg8Vuxnt8zlJsb4G7UKj1ZSMfSAhOmqFWBOZxt7B_lpbyyJTNsEYcDaRXUeWdaRbYMdDHgB4DcLVOp6yQLL6NluecDnDReyjsTdBUrtFOCFC9QwgFd0JPTIp_LBm1000]-->
     </g>
 </svg>

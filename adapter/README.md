@@ -1,4 +1,4 @@
-# Abstract Factory
+# Adapter
 Category:
 - Structural
 
@@ -25,7 +25,6 @@ The Analogy:
 - Adaptee (FishingBoat): The existing class that provides the functionality but doesn't match the expected interface.
 - Adapter (FishingBoatAdapter): Converts the FishingBoat's sail() method into the row() method expected by the Captain.
 - Client (Captain): Uses boats through the RowingBoat interface without knowing the concrete implementation.
-Concrete Factories:
 
 The Key Point:
 - The Captain works with any object that implements the RowingBoat interface, remaining completely unaware of whether it's a true rowing boat or a fishing boat being adapted.
@@ -35,7 +34,7 @@ The Key Point:
 ## The UML class diagram
 ![Alt text](./etc/adapter.svg)
 
-## The UML sequemce diagram
+## The UML sequence diagram
 ![Alt text](./etc/adapter-sequence-diagram.svg)
 ## The program output
 
@@ -43,8 +42,8 @@ The Key Point:
 [2025-06-22 15:29:54.324] [info] The fishing boat is sailing
 ```
 
-## When to Use the Adapter Pattern in Java
-Use the Adapter pattern in Java when:
+## Use the Adapter pattern when:"
+Use the Adapter pattern when:
 
 - You want to use an existing class, and its interface does not match the one you need.
 - You want to create a reusable class that cooperates with unrelated or unforeseen classes, that is, classes that don't necessarily have compatible interfaces.

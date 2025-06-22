@@ -1,5 +1,5 @@
 @startuml
-title Adapter Pattern - FishingBoat Example
+title Adapter Pattern
 
 namespace dp {
 
