@@ -1,0 +1,12 @@
+@startuml
+title Adapter Pattern - Sequence Diagram
+
+actor Captain
+
+Captain -> FishingBoatAdapter: row()
+FishingBoatAdapter -> FishingBoat: sail()
+FishingBoat -> FishingBoat: log "The fishing boat is sailing"
+FishingBoatAdapter <-- FishingBoat: (returns)
+Captain <-- FishingBoatAdapter: (returns)
+
+@enduml

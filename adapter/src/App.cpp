@@ -1,14 +1,16 @@
 //
-// Created by noname on 02.07.23.
+// Created by Mateusz Paszkowski on 02.07.2023.
 //
-#include <utility>
 
 #include "App.h"
+#include "Captain.h"
 #include "FishingBoatAdapter.h"
-#include "Capitan.h"
 
-
-void App::run() const {
-    Captain captain(new FishingBoatAdapter());
+namespace dp
+{
+void App::run() const
+{
+    Captain captain(std::make_unique<FishingBoatAdapter>());
     captain.row();
 }
+} // namespace dp

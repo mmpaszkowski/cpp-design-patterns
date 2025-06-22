@@ -1,0 +1,31 @@
+@startuml
+title Adapter Pattern - FishingBoat Example
+
+namespace dp {
+
+interface RowingBoat {
+    +row(): void
+}
+
+class FishingBoat {
+    +sail(): void
+}
+
+class FishingBoatAdapter {
+    +row(): void
+    -boat_: FishingBoat
+}
+
+class Captain {
+    +Captain(rowingBoat: RowingBoat)
+    +row(): void
+    -rowingBoat_: RowingBoat
+}
+
+RowingBoat <|.. FishingBoatAdapter
+FishingBoatAdapter o-- FishingBoat
+Captain o-- RowingBoat
+
+}
+
+@enduml

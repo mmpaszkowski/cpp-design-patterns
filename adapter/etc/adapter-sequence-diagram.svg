@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css"
+     data-diagram-type="SEQUENCE" height="399px" preserveAspectRatio="none"
+     style="width:473px;height:399px;background:#FFFFFF;" version="1.1" viewBox="0 0 473 399" width="473px"
+     zoomAndPan="magnify">
+    <title>Adapter Pattern - Sequence Diagram</title>
+    <defs/>
+    <g>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="256.339" x="108.0512" y="29.9659">Adapter Pattern - Sequence Diagram
+        </text>
+        <g>
+            <title>Captain</title>
+            <rect fill="#000000" fill-opacity="0.00000" height="191.5301" width="8" x="29.2419" y="124.1358"/>
+            <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="33" x2="33" y1="124.1358"
+                  y2="315.6659"/>
+        </g>
+        <g>
+            <title>FishingBoatAdapter</title>
+            <rect fill="#000000" fill-opacity="0.00000" height="191.5301" width="8" x="139.6536" y="124.1358"/>
+            <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="143.4838" x2="143.4838"
+                  y1="124.1358" y2="315.6659"/>
+        </g>
+        <g>
+            <title>FishingBoat</title>
+            <rect fill="#000000" fill-opacity="0.00000" height="191.5301" width="8" x="267.6172" y="124.1358"/>
+            <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="270.8233" x2="270.8233"
+                  y1="124.1358" y2="315.6659"/>
+        </g>
+        <g class="participant participant-head" data-participant="Captain">
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.4838"
+                  x="5" y="120.0339">Captain
+            </text>
+            <ellipse cx="33.2419" cy="53.5679" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M33.2419,61.5679 L33.2419,88.5679 M20.2419,69.5679 L46.2419,69.5679 M33.2419,88.5679 L20.2419,103.5679 M33.2419,88.5679 L46.2419,103.5679"
+                  fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        </g>
+        <g class="participant participant-tail" data-participant="Captain">
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.4838"
+                  x="5" y="329.6319">Captain
+            </text>
+            <ellipse cx="33.2419" cy="342.2338" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M33.2419,350.2338 L33.2419,377.2338 M20.2419,358.2338 L46.2419,358.2338 M33.2419,377.2338 L20.2419,392.2338 M33.2419,377.2338 L46.2419,392.2338"
+                  fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        </g>
+        <g class="participant participant-head" data-participant="FishingBoatAdapter">
+            <rect fill="#E2E2F0" height="33.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="144.3395" x="71.4838" y="90.0679"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130.3395"
+                  x="78.4838" y="112.0339">FishingBoatAdapter
+            </text>
+        </g>
+        <g class="participant participant-tail" data-participant="FishingBoatAdapter">
+            <rect fill="#E2E2F0" height="33.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="144.3395" x="71.4838" y="314.6659"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130.3395"
+                  x="78.4838" y="336.6319">FishingBoatAdapter
+            </text>
+        </g>
+        <g class="participant participant-head" data-participant="FishingBoat">
+            <rect fill="#E2E2F0" height="33.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="91.5877" x="225.8233" y="90.0679"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.5877"
+                  x="232.8233" y="112.0339">FishingBoat
+            </text>
+        </g>
+        <g class="participant participant-tail" data-participant="FishingBoat">
+            <rect fill="#E2E2F0" height="33.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="91.5877" x="225.8233" y="314.6659"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.5877"
+                  x="232.8233" y="336.6319">FishingBoat
+            </text>
+        </g>
+        <g class="message" data-participant-1="Captain" data-participant-2="FishingBoatAdapter">
+            <polygon fill="#181818" points="131.6536,153.8419,141.6536,157.8419,131.6536,161.8419,135.6536,157.8419"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="33.2419" x2="137.6536" y1="157.8419" y2="157.8419"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="31.252"
+                  x="40.2419" y="152.0328">row()
+            </text>
+        </g>
+        <g class="message" data-participant-1="FishingBoatAdapter" data-participant-2="FishingBoat">
+            <polygon fill="#181818" points="259.6172,185.5479,269.6172,189.5479,259.6172,193.5479,263.6172,189.5479"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="143.6536" x2="265.6172" y1="189.5479" y2="189.5479"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28.028"
+                  x="150.6536" y="183.7389">sail()
+            </text>
+        </g>
+        <g class="message" data-participant-1="FishingBoat" data-participant-2="FishingBoat">
+            <line style="stroke:#181818;stroke-width:1;" x1="271.6172" x2="313.6172" y1="221.2539" y2="221.2539"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="313.6172" x2="313.6172" y1="221.2539" y2="234.2539"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="272.6172" x2="313.6172" y1="234.2539" y2="234.2539"/>
+            <polygon fill="#181818" points="282.6172,230.2539,272.6172,234.2539,282.6172,238.2539,278.6172,234.2539"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187.8242"
+                  x="278.6172" y="215.4449">log "The fishing boat is sailing"
+            </text>
+        </g>
+        <g class="message" data-participant-1="FishingBoat" data-participant-2="FishingBoatAdapter">
+            <polygon fill="#181818" points="154.6536,261.9599,144.6536,265.9599,154.6536,269.9599,150.6536,265.9599"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="148.6536" x2="270.6172"
+                  y1="265.9599" y2="265.9599"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52.8581"
+                  x="160.6536" y="260.1509">(returns)
+            </text>
+        </g>
+        <g class="message" data-participant-1="FishingBoatAdapter" data-participant-2="Captain">
+            <polygon fill="#181818" points="44.2419,293.6659,34.2419,297.6659,44.2419,301.6659,40.2419,297.6659"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="38.2419" x2="142.6536"
+                  y1="297.6659" y2="297.6659"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52.8581"
+                  x="50.2419" y="291.8569">(returns)
+            </text>
+        </g><!--SRC=[ROvD3e9038NtSueNLh2O2n1ZuazSc-W5AbPeCix8J8dN5vLW05TjNx- -FXLrZCsL7ieHHzA-U5YSkEtOLuozK1tfRWnL6Y9sFKZYZHaQs3KEaXhnzJQG3aObOdZcXLbkPdo9HEAcv09neKPsRXYthuhBcvBqkUtdxD-VbRLJbpooTj6dOem-GyRiF_85]-->
+    </g>
+</svg>

@@ -1,13 +1,16 @@
 # SOURCES AND HEADERS
 set(LIBRARY_SOURCES
         src/App.cpp
-        )
+        src/Captain.cpp
+        src/FishingBoat.cpp
+        src/FishingBoatAdapter.cpp
+)
 
 set(LIBRARY_HEADERS
         include/App.h
+        include/Captain.h
         include/FishingBoatAdapter.h
-        include/FishingBoat.h
-        include/Capitan.h)
+        include/FishingBoat.h)
 
 
 add_library(adapter STATIC

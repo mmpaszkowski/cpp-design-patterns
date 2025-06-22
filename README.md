@@ -14,7 +14,7 @@ Planned design patterns
 | abstract-factory                       | :heavy_check_mark: | :heavy_check_mark: |                         |
 | active-object                          | :heavy_check_mark: |        :x:         |                         |
 | acyclic-visitor                        | :heavy_check_mark: |        :x:         |                         |
-| adapter                                | :heavy_check_mark: |        :x:         |                         |
+| adapter                                | :heavy_check_mark: | :heavy_check_mark: |                         |
 | aggregator-microservices               |        :x:         |        :x:         |                         |
 | ambassador                             |        :x:         |        :x:         | #todo refactorization   |
 | api-gateway                            |        :x:         |        :x:         | Http protocol necessary |
