@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Default build type
+BUILD_TYPE=Debug
+
+# Allow passing build type as argument
+if [ "$1" != "" ]; then
+    BUILD_TYPE=$1
+fi
+
+echo "Configuring project with build type: $BUILD_TYPE"
+
+# Create build directory if it doesn't exist
+mkdir -p build
+cd build || exit 1
+
+# Run cmake
+cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+
+# Print helpful message
+if [ $? -eq 0 ]; then
+    echo "Project configured successfully."
+    echo "You can now run 'cmake --build .' or 'make' inside the build directory."
+else
+    echo "Configuration failed."
+    exit 1
+fi
