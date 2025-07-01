@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: chmod
-      run: chmod +x ./configure
+    - name: sed
+      run: sed -i 's/\r$//' configure
     - name: configure
       run: bash ./configure
     - name: make
