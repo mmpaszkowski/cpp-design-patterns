@@ -16,7 +16,7 @@ jobs:
     - name: chmod
       run: chmod +x ./configure
     - name: configure
-      run: ./configure
+      run: bash ./configure
     - name: make
       run: make
     - name: make check
