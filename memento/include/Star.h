@@ -9,6 +9,7 @@
 #include "StarMemento.h"
 #include <iostream>
 #include <format>
+#include <memory>
 
 using namespace std::literals::string_literals;
 
