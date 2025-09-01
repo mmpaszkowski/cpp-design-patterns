@@ -5,7 +5,6 @@ Project bases on java implementation of design patterns: https://github.com/iluw
 # TODO
 - Add dependency injectable logger for logging handling possibility
 
-
 Planned design patterns
 
 | Design Pattern                         |   Implementation   |    Description     | Comments                |  
