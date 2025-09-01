@@ -4,10 +4,11 @@ namespace dp {
     - kingdom_ : Kingdom
 
     + run()
-    - setUpKingdom(KingdomType kingdomType)
+    + setUpKingdom(KingdomType kingdomType)
+    # logKingdomDetails(KingdomType kingdomType)
   }
 
-  class FactoryMaker {
+  class KingdomFactoryMaker {
     + static std::unique_ptr<KingdomFactory> makeFactory(KingdomType type);
   }
 
@@ -87,10 +88,10 @@ namespace dp {
   }
 }
 
-KingdomType <.. FactoryMaker
+KingdomType <.. KingdomFactoryMaker
 Kingdom *-- Castle
-FactoryMaker <.. Kingdom
-KingdomFactory <.. FactoryMaker
+KingdomFactoryMaker <.. Kingdom
+KingdomFactory <.. KingdomFactoryMaker
 Kingdom ..* App
 Kingdom *-- King
 Kingdom *-- Army

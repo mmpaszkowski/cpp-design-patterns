@@ -2,7 +2,7 @@
 // Created by Mateusz Paszkowski on 29.06.2023.
 //
 
-#include "../include/ElfArmy.h"
+#include "ElfArmy.h"
 
 namespace dp
 {

@@ -48,23 +48,23 @@ The Key Point:
 - The client (room designer) doesn’t care what exact kind of chair or table it gets — it just asks the factory to give matching pieces. This ensures consistency and makes it easy to switch the entire style by simply swapping the factory.
 
 ## The UML diagram
-![Alt text](./etc/abstract-factory.svg)
+![Abstract Factory UML](./etc/abstract-factory.svg)
 
 ## The program output
 
 ```
-[2025-06-17 11:51:12.600] [info] elf kingdom
-[2025-06-17 11:51:12.602] [info] This is the elven army!
-[2025-06-17 11:51:12.602] [info] This is the elven castle!
-[2025-06-17 11:51:12.602] [info] This is the elven king!
-[2025-06-17 11:51:12.603] [info] orc kingdom
-[2025-06-17 11:51:12.603] [info] This is the orc army!
-[2025-06-17 11:51:12.603] [info] This is the orc castle!
-[2025-06-17 11:51:12.603] [info] This is the orc king!
+[info] elf kingdom
+[info] This is the elven army!
+[info] This is the elven castle!
+[info] This is the elven king!
+[info] orc kingdom
+[info] This is the orc army!
+[info] This is the orc castle!
+[info] This is the orc king!
 ```
 
-## When to Use the Abstract Factory Pattern in Java
-Use the Abstract Factory pattern in Java when:
+## When to Use the Abstract Factory Pattern in C++
+Use the Abstract Factory pattern in C++ when:
 
 - The system should be independent of how its products are created, composed, and represented.
 - You need to configure the system with one of multiple families of products.
@@ -86,7 +86,7 @@ Trade-offs:
 - Complexity: Defining abstract interfaces and concrete factories adds initial overhead.
 - Indirectness: Client code interacts with products indirectly through factories, potentially reducing transparency.
 
-## Related Java Design Patterns
+## Related C++ Design Patterns
 - Factory Method: Abstract Factory uses Factory Methods to create products.
 - Singleton: Abstract Factory classes are often implemented as Singletons.
 - Factory Kit: Similar to Abstract Factory but focuses on configuring and managing a set of related objects in a flexible way.

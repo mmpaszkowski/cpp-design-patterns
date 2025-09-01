@@ -2,7 +2,7 @@
 // Created by Mateusz Paszkowski on 02.07.2023.
 //
 
-#include "../include/Kingdom.h"
+#include "Kingdom.h"
 #include "ElfKingdomFactory.h"
 #include "OrcKingdomFactory.h"
 
