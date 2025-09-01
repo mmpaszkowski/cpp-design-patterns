@@ -18,6 +18,7 @@ FetchContent_MakeAvailable(spdlog)
 # CMAKE MODULES
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/)
 include(Tools)
+enable_testing()
 
 add_subdirectory(abstract-document)
 add_subdirectory(abstract-factory)
