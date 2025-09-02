@@ -12,4 +12,4 @@ void ClubbedTroll::attack()
     decorated->attack();
     spdlog::info("The troll swings at you with a club!");
 }
-}
+} // namespace dp

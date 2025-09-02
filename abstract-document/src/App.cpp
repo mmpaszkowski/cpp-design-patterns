@@ -2,9 +2,9 @@
 // Created by Mateusz Paszkowski on 01.07.2023.
 //
 
-#include "../include/App.h"
-#include "../include/Car.h"
-#include "../include/enum/Property.h"
+#include "App.h"
+#include "Car.h"
+#include "enum/Property.h"
 #include <spdlog/spdlog.h>
 
 using spdlog::info;
