@@ -1,18 +1,57 @@
 @startuml
-class Document
-class AbstractDocument
-class HasModel
-class HasPrice
-class HasType
-class HasParts
-class Part
-class Car
+interface Document {
+    +~Document()
+    +put(key: string, value: any)
+    +get(key: string): any
+    +children(key: string): vector<map<string, any>>
+}
+
+class AbstractDocument {
+    -properties_: map<string, any>
+    +AbstractDocument()
+    +AbstractDocument(properties: map<string, any>)
+    +AbstractDocument(other: AbstractDocument)
+    +AbstractDocument(other: AbstractDocument &&)
+    +operator=(other: AbstractDocument): AbstractDocument &
+    +operator=(other: AbstractDocument &&): AbstractDocument &
+    +put(key: string, value: any)
+    +get(key: string): any
+    +children(key: string): vector<map<string, any>>
+}
+
+class HasModel {
+    +getModel(): optional<string>
+}
+
+class HasPrice {
+    +getPrice(): optional<long>
+}
+
+class HasType {
+    +getType(): optional<string>
+}
+
+class HasParts {
+    +getParts(): vector<Part>
+}
+
+class Part {
+    +Part(properties: map<string, any>)
+    +Part(properties: map<string, any> &&)
+}
+
+class Car {
+    +Car(properties: map<string, any>)
+    +Car(properties: map<string, any> &&)
+}
 
 Document <|-- AbstractDocument
-AbstractDocument <|-- HasModel
-AbstractDocument <|-- HasPrice
-AbstractDocument <|-- HasType
-AbstractDocument <|-- HasParts
+Document <|-- HasModel
+Document <|-- HasPrice
+Document <|-- HasType
+Document <|-- HasParts
+AbstractDocument <|-- Car
+AbstractDocument <|-- Part
 HasModel <|-- Car
 HasPrice <|-- Car
 HasParts <|-- Car
