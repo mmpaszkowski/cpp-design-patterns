@@ -1,5 +1,5 @@
 //
-// Created by noname on 3/30/24.
+// Created by Mateusz Paszkowski on 30.03.2024.
 //
 
 #ifndef BEAST_H

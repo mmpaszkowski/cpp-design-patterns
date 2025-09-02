@@ -1,19 +1,21 @@
 //
-// Created by noname on 01.07.23.
+// Created by Mateusz Paszkowski on 01.07.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_HAS_PRICE_H
 #define CPP_DESIGN_PATTERNS_HAS_PRICE_H
 
-#include <optional>
 #include "Document.h"
 #include "enum/Property.h"
+#include <optional>
 
-class HasPrice : public virtual Document {
+namespace dp
+{
+class HasPrice : public virtual Document
+{
 public:
-    std::optional<long> getPrice() {
-        return std::any_cast<long>(this->get(to_string(Property::PRICE)));
-    }
+    [[nodiscard]] std::optional<long> getPrice() const { return std::any_cast<long>(get(to_string(Property::PRICE))); }
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_HAS_PRICE_H

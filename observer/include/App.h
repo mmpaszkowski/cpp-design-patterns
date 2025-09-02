@@ -1,5 +1,5 @@
 //
-// Created by noname on 11.11.2024.
+// Created by Mateusz Paszkowski on 11.11.2024.
 //
 
 #ifndef APP_H

@@ -1,5 +1,5 @@
 //
-// Created by noname on 23.10.2024
+// Created by Mateusz Paszkowski on 23.10.2024.
 //
 
 #ifndef STAR_MEMENTO_H

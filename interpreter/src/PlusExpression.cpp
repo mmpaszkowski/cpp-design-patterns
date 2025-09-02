@@ -1,5 +1,5 @@
 //
-// Created by noname on 4/26/24.
+// Created by Mateusz Paszkowski on 26.04.2024.
 //
 
 #include "PlusExpression.h"

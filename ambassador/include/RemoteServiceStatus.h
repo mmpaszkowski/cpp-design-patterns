@@ -1,5 +1,5 @@
 //
-// Created by noname on 10.07.23.
+// Created by Mateusz Paszkowski on 10.07.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_REMOTE_SERVICE_STATUS_H

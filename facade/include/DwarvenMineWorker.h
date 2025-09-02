@@ -1,5 +1,5 @@
 //
-// Created by noname on 4/16/24.
+// Created by Mateusz Paszkowski on 16.04.2024.
 //
 
 #ifndef DWARVEN_MINE_WORKER_H

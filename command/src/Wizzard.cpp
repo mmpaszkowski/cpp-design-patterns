@@ -1,6 +1,7 @@
 //
-// Created by noname on 4/8/24.
+// Created by Mateusz Paszkowski on 08.04.2024.
 //
+
 #include "Wizzard.h"
 namespace dp
 {

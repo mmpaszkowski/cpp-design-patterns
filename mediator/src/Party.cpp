@@ -1,6 +1,7 @@
 //
-// Created by noname on 29.10.24.
+// Created by Mateusz Paszkowski on 29.10.2024.
 //
+
 #include "Party.h"
 #include "PartyMember.h"
 

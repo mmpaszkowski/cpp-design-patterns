@@ -1,5 +1,5 @@
 //
-// Created by noname on 12.07.23.
+// Created by Mateusz Paszkowski on 12.07.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_CLIENT_H

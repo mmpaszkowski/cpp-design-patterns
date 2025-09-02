@@ -1,5 +1,5 @@
 //
-// Created by noname on 29.06.2024.
+// Created by Mateusz Paszkowski on 29.06.2024.
 //
 
 #ifndef WIZARD_H

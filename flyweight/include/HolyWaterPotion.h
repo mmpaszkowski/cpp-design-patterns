@@ -1,5 +1,5 @@
 //
-// Created by noname on 4/17/24.
+// Created by Mateusz Paszkowski on 17.04.2024.
 //
 
 #ifndef HOLY_WATER_POTION_H

@@ -1,6 +1,7 @@
 //
-// Created by noname on 11.11.2024.
+// Created by Mateusz Paszkowski on 11.11.2024.
 //
+
 #include <utility>
 #include <spdlog/spdlog.h>
 #include "App.h"

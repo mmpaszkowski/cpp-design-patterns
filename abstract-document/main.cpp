@@ -1,6 +1,11 @@
+//
+// Created by Mateusz Paszkowski on 01.07.2023.
+//
+
 #include <App.h>
 
-int main() {
-    App app;
+int main()
+{
+    dp::App app;
     app.run();
 }

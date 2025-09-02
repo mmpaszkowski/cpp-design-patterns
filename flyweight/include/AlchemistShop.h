@@ -1,5 +1,5 @@
 //
-// Created by noname on 4/21/24.
+// Created by Mateusz Paszkowski on 21.04.2024.
 //
 
 #ifndef ALCHEMIST_SHOP_H

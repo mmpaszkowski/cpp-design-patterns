@@ -1,5 +1,5 @@
 //
-// Created by noname on 02.07.23.
+// Created by Mateusz Paszkowski on 02.07.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_ZOOM_VISITOR_H
