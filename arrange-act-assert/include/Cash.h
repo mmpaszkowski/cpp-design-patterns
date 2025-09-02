@@ -15,7 +15,7 @@ public:
 
     void plus(int addend);
 
-    [[maybe_unused]] bool minus(int subtrahend);
+    void minus(int subtrahend);
 
     [[nodiscard]] int count() const;
 };
