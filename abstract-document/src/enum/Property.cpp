@@ -2,7 +2,7 @@
 // Created by Mateusz Paszkowski on 01.07.2023.
 //
 
-#include "../../include/enum/Property.h"
+#include "enum/Property.h"
 
 namespace dp
 {
