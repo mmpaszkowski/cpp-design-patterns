@@ -6,19 +6,12 @@
 
 namespace dp
 {
-AbstractDocument::AbstractDocument() noexcept = default;
-
 AbstractDocument::AbstractDocument(const std::map<std::string, std::any>& properties) : properties_(properties) {}
 
-AbstractDocument::AbstractDocument(const AbstractDocument& other)                           = default;
-
-AbstractDocument::AbstractDocument(AbstractDocument&& other) noexcept                       = default;
-
-AbstractDocument& AbstractDocument::operator=(const AbstractDocument& abstractDocument)     = default;
-
-AbstractDocument& AbstractDocument::operator=(AbstractDocument&& abstractDocument) noexcept = default;
-
-void     AbstractDocument::put(const std::string& key, const std::any& value) { properties_.emplace(key, value); }
+void AbstractDocument::put(const std::string& key, const std::any& value)
+{
+    properties_.insert_or_assign(key, value);
+}
 
 std::any AbstractDocument::get(const std::string& key) const noexcept
 {
@@ -31,16 +24,11 @@ std::any AbstractDocument::get(const std::string& key) const noexcept
 
 std::vector<std::map<std::string, std::any>> AbstractDocument::children(const std::string& key) const noexcept
 {
-    if (auto value = get(key); value.has_value())
+    auto value = get(key);
+    if (const auto child =
+            std::any_cast<std::vector<std::map<std::string, std::any>>>(&value))
     {
-        try
-        {
-            return std::any_cast<std::vector<std::map<std::string, std::any>>>(value);
-        }
-        catch (const std::bad_any_cast&)
-        {
-            return {};
-        }
+        return *child;
     }
     return {};
 }

@@ -16,7 +16,12 @@ class HasType : public virtual Document
 public:
     [[nodiscard]] std::optional<std::string> getType() const
     {
-        return std::any_cast<std::string>(get(to_string(Property::TYPE)));
+        auto value = get(to_string(Property::TYPE));
+        if (const auto type = std::any_cast<std::string>(&value))
+        {
+            return *type;
+        }
+        return std::nullopt;
     }
 };
 } // namespace dp

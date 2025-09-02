@@ -42,3 +42,11 @@ TEST(abstract_document, should_construct_car)
     GTEST_ASSERT_EQ(TEST_CAR_PRICE, car.getPrice().value());
     GTEST_ASSERT_EQ(2, car.getParts().size());
 }
+
+TEST(abstract_document, should_return_nullopt_for_missing_properties)
+{
+    auto car = Car(std::map<std::string, std::any>{});
+    GTEST_ASSERT_FALSE(car.getModel().has_value());
+    GTEST_ASSERT_FALSE(car.getPrice().has_value());
+    GTEST_ASSERT_TRUE(car.getParts().empty());
+}
