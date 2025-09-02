@@ -1,5 +1,5 @@
 //
-// Created by noname on 3/29/24.
+// Created by Mateusz Paszkowski on 29.03.2024.
 //
 
 #ifndef HAIR_COLOR_H

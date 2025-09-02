@@ -1,5 +1,5 @@
 //
-// Created by noname on 02.07.23.
+// Created by Mateusz Paszkowski on 02.07.2023.
 //
 
 #include "ConfigureForDosVisitor.h"

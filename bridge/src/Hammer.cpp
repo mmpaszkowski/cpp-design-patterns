@@ -1,5 +1,5 @@
 //
-// Created by noname on 4/10/24.
+// Created by Mateusz Paszkowski on 10.04.2024.
 //
 
 #include "Hammer.h"

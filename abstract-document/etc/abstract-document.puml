@@ -1,0 +1,22 @@
+@startuml
+class Document
+class AbstractDocument
+class HasModel
+class HasPrice
+class HasType
+class HasParts
+class Part
+class Car
+
+Document <|-- AbstractDocument
+AbstractDocument <|-- HasModel
+AbstractDocument <|-- HasPrice
+AbstractDocument <|-- HasType
+AbstractDocument <|-- HasParts
+HasModel <|-- Car
+HasPrice <|-- Car
+HasParts <|-- Car
+HasModel <|-- Part
+HasPrice <|-- Part
+HasType <|-- Part
+@enduml

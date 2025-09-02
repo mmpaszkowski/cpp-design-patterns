@@ -1,5 +1,5 @@
 //
-// Created by noname on 30.10.2024.
+// Created by Mateusz Paszkowski on 30.10.2024.
 //
 
 #include <gmock/gmock.h>

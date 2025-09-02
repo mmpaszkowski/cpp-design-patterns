@@ -1,6 +1,7 @@
 //
-// Created by noname on 02.12.2024.
+// Created by Mateusz Paszkowski on 02.12.2024.
 //
+
 #include <algorithm>
 #include <vector>
 #include "Circle.h"

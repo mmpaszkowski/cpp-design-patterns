@@ -1,6 +1,7 @@
 //
-// Created by noname on 4/6/24.
+// Created by Mateusz Paszkowski on 06.04.2024.
 //
+
 #include "Nazgul.h"
 #include <memory>
 

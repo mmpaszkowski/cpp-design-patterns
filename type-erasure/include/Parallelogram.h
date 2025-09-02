@@ -1,5 +1,5 @@
 //
-// Created by noname on 02.12.2024.
+// Created by Mateusz Paszkowski on 02.12.2024.
 //
 
 #ifndef PARALLELOGRAM_H

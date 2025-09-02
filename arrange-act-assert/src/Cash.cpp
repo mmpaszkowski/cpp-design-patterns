@@ -1,5 +1,5 @@
 //
-// Created by noname on 17.07.23.
+// Created by Mateusz Paszkowski on 17.07.2023.
 //
 
 #include "../include/Cash.h"

@@ -1,6 +1,7 @@
 //
-// Created by noname on 01.07.23.
+// Created by Mateusz Paszkowski on 01.07.2023.
 //
+
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "Zoom.h"

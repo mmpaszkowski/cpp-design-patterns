@@ -1,5 +1,5 @@
 //
-// Created by noname on 4/24/24.
+// Created by Mateusz Paszkowski on 24.04.2024.
 //
 
 #ifndef MULTIPLY_EXPRESSION_H

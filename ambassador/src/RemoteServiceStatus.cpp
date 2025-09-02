@@ -1,5 +1,5 @@
 //
-// Created by noname on 14.07.23.
+// Created by Mateusz Paszkowski on 14.07.2023.
 //
 
 #include "RemoteServiceStatus.h"

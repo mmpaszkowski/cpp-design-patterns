@@ -1,5 +1,5 @@
 //
-// Created by noname on 04.11.2024
+// Created by Mateusz Paszkowski on 04.11.2024.
 //
 
 #ifndef HUNTER_H

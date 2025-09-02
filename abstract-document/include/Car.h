@@ -1,5 +1,5 @@
 //
-// Created by noname on 01.07.23.
+// Created by Mateusz Paszkowski on 01.07.2023.
 //
 
 #ifndef CPP_DESIGN_PATTERNS_CAR_H
@@ -10,10 +10,14 @@
 #include "HasParts.h"
 #include "HasPrice.h"
 
-class Car : public AbstractDocument, public HasModel, public HasPrice, public HasParts {
+namespace dp
+{
+class Car : public AbstractDocument, public HasModel, public HasPrice, public HasParts
+{
 public:
     explicit Car(const std::map<std::string, std::any>& properties) : AbstractDocument(properties) {}
-    explicit Car(std::map<std::string, std::any>&& properties) : AbstractDocument(properties) {}
+    explicit Car(std::map<std::string, std::any>&& properties) : AbstractDocument(std::move(properties)) {}
 };
+} // namespace dp
 
 #endif //CPP_DESIGN_PATTERNS_CAR_H

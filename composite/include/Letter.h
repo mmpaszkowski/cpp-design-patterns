@@ -1,5 +1,5 @@
 //
-// Created by noname on 4/12/24.
+// Created by Mateusz Paszkowski on 12.04.2024.
 //
 
 #ifndef LETTER_H

@@ -1,5 +1,5 @@
 //
-// Created by noname on 6/29/24.
+// Created by Mateusz Paszkowski on 29.06.2024.
 //
 
 #ifndef PARTY_MEMBER_H

@@ -1,5 +1,5 @@
 //
-// Created by noname on 01.11.24.
+// Created by Mateusz Paszkowski on 01.11.2024.
 //
 
 #include <App.h>

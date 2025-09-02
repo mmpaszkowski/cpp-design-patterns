@@ -1,6 +1,7 @@
 //
-// Created by noname on 4/13/24.
+// Created by Mateusz Paszkowski on 13.04.2024.
 //
+
 #include "Letter.h"
 
 namespace dp
