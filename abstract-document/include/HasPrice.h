@@ -14,7 +14,15 @@ namespace dp
 class HasPrice : public virtual Document
 {
 public:
-    [[nodiscard]] std::optional<long> getPrice() const { return std::any_cast<long>(get(to_string(Property::PRICE))); }
+    [[nodiscard]] std::optional<long> getPrice() const
+    {
+        auto value = get(to_string(Property::PRICE));
+        if (const auto price = std::any_cast<long>(&value))
+        {
+            return *price;
+        }
+        return std::nullopt;
+    }
 };
 } // namespace dp
 

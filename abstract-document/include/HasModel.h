@@ -16,7 +16,12 @@ class HasModel : public virtual Document
 public:
     [[nodiscard]] std::optional<std::string> getModel() const
     {
-        return std::any_cast<std::string>(get(to_string(Property::MODEL)));
+        auto value = get(to_string(Property::MODEL));
+        if (const auto model = std::any_cast<std::string>(&value))
+        {
+            return *model;
+        }
+        return std::nullopt;
     }
 };
 } // namespace dp

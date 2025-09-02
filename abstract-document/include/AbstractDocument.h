@@ -12,13 +12,13 @@ namespace dp
 class AbstractDocument : public virtual Document
 {
 public:
-    AbstractDocument() noexcept;
+    AbstractDocument() noexcept = default;
     explicit AbstractDocument(const std::map<std::string, std::any>& properties);
-    AbstractDocument(const AbstractDocument& other);
-    AbstractDocument(AbstractDocument&& other) noexcept;
+    AbstractDocument(const AbstractDocument& other)            = default;
+    AbstractDocument(AbstractDocument&& other) noexcept        = default;
 
-    AbstractDocument&      operator=(const AbstractDocument& abstractDocument);
-    AbstractDocument&      operator=(AbstractDocument&& abstractDocument) noexcept;
+    AbstractDocument& operator=(const AbstractDocument& abstractDocument) = default;
+    AbstractDocument& operator=(AbstractDocument&& abstractDocument) noexcept = default;
 
     void                   put(const std::string& key, const std::any& value) override;
     [[nodiscard]] std::any get(const std::string& key) const noexcept override;
